@@ -1,0 +1,677 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cebu Yeondu Dive AIDA2 공부장</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{--c:#0b7fa8;--d:#0b5c7a;--bg:#f4f9fb;--ok:#1a8f4c;--no:#c0392b}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;background:var(--bg);color:#222;line-height:1.65;font-size:16px}
+header{background:linear-gradient(135deg,#0b5c7a,#11a3c9);color:#fff;padding:18px 16px 12px}
+header h1{margin:0;font-size:21px}header p{margin:4px 0 0;font-size:13px;opacity:.9}
+nav{position:sticky;top:0;z-index:9;background:#fff;display:flex;overflow-x:auto;border-bottom:1px solid #d6e6ec}
+nav button{flex:1 0 auto;border:0;background:none;padding:12px 14px;font-size:15px;color:#555;border-bottom:3px solid transparent;font-family:inherit}
+nav button.on{color:var(--d);border-color:var(--c);font-weight:700}
+main{max-width:760px;margin:0 auto;padding:14px}
+section{display:none}section.on{display:block}
+.card{background:#fff;border-radius:12px;padding:14px 16px;margin:0 0 12px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+h2{font-size:17px;color:var(--d);margin:4px 0 8px}
+ul{padding-left:20px;margin:6px 0}li{margin:4px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:#fff}
+td,th{border:1px solid #cfe1e8;padding:7px 8px;vertical-align:top;text-align:left}th{background:#e6f3f8}
+details{background:#fff;border-radius:10px;margin:0 0 8px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+details summary{padding:12px 14px;cursor:pointer;font-weight:600;color:var(--d);list-style:none}
+details summary::before{content:"▸ ";color:var(--c)}details[open] summary::before{content:"▾ "}
+details>*:not(summary){padding:0 16px 10px}
+.ans{background:#fff8e6;border-left:4px solid #f0a500;margin:0 14px 12px;padding:8px 12px!important;border-radius:6px}
+.tip{background:#e9f6ee;border-left:4px solid var(--ok);padding:10px 12px;border-radius:8px;font-size:14.5px;margin-bottom:12px}
+.ctrl{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.ctrl select,.ctrl button{font:inherit;font-size:14px;padding:8px 12px;border-radius:8px;border:1px solid #bcd3dc;background:#fff}
+.btn{background:var(--c)!important;color:#fff;border-color:var(--c)!important;font-weight:600}
+.q{font-weight:700;margin-bottom:8px}.tag{display:inline-block;font-size:12px;background:#e6f3f8;color:var(--d);border-radius:20px;padding:1px 9px;margin-right:6px;font-weight:600}
+.tag.m{background:#fde8d8;color:#b0521d}.tag.t{background:#ece4fb;color:#5b3aa6}
+label.opt{display:block;border:1px solid #d6e6ec;border-radius:9px;padding:9px 12px;margin:6px 0;cursor:pointer;background:#fbfdfe}
+label.opt input{margin-right:8px}
+label.opt.right{border-color:var(--ok);background:#e9f6ee}label.opt.wrong{border-color:var(--no);background:#fbeaea}
+textarea{width:100%;min-height:64px;font:inherit;font-size:15px;padding:8px;border-radius:8px;border:1px solid #bcd3dc}
+.exp{margin-top:8px;padding:8px 12px;border-radius:8px;background:#f2f7f9;font-size:14.5px;display:none}
+.exp.show{display:block}.res{font-weight:700}.res.ok{color:var(--ok)}.res.no{color:var(--no)}
+.score{position:sticky;bottom:0;background:#fff;border-top:1px solid #d6e6ec;padding:10px 14px;text-align:center;font-weight:700;color:var(--d);margin:0 -14px}
+.self{display:none;gap:8px;margin-top:8px}.self.show{display:flex}.self button{flex:1;font:inherit;padding:8px;border-radius:8px;border:1px solid #ccc;background:#fff}
+.fc{min-height:150px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:20px;font-weight:700;color:var(--d);cursor:pointer;user-select:none}
+.fc.back{font-size:17px;color:#333;font-weight:500}
+.srch{position:sticky;top:46px;z-index:8;background:var(--bg);display:flex;gap:6px;align-items:center;padding:6px 0 8px;flex-wrap:wrap}
+.srch input{flex:1 1 180px;font:inherit;font-size:15px;padding:9px 10px;border-radius:8px;border:1px solid #bcd3dc}
+.srch button{font:inherit;font-size:14px;padding:8px 12px;border-radius:8px;border:1px solid #bcd3dc;background:#fff}#scnt{font-size:13px;color:#555}
+.toc a{display:block;padding:4px 0;color:var(--c);text-decoration:none;font-size:14.5px}
+.full h2.mh1{font-size:19px;color:#fff;background:var(--c);padding:6px 10px;border-radius:6px;margin:22px 0 10px}
+.full h3.mh2{font-size:16.5px;color:var(--d);border-bottom:2px solid #cfe1e8;padding-bottom:3px;margin:18px 0 8px}
+.full h4.mh3,.full h5{font-size:15.5px;color:#333;margin:14px 0 6px}
+.full p{margin:6px 0}.full blockquote{margin:8px 0;padding:6px 12px;background:#f2f7f9;border-left:4px solid var(--c);border-radius:6px}
+mark{background:#ffe066;padding:0 1px}mark.cur{background:#ff9f1a}
+#qz .card{border-radius:14px}
+.qhome h2{margin:0 0 10px}
+.stat3{display:flex;gap:8px;margin-bottom:10px}
+.stat3>div{flex:1;background:#f2f8fb;border-radius:10px;padding:10px 6px;text-align:center}
+.stat3 b{display:block;font-size:22px;color:var(--d)}.stat3 span{font-size:12px;color:#667}
+.pbar{height:8px;background:#e3eef3;border-radius:6px;overflow:hidden;flex:1}
+.pbar i{display:block;height:100%;background:var(--c);border-radius:6px;transition:width .3s}
+.pbar i.low{background:#e08a3c}
+.pbar.thin{height:5px;margin:0 0 12px}
+.hint{font-size:13px;color:#667;margin:8px 0 4px}
+.lbl{font-size:13px;font-weight:700;color:#556;margin:14px 0 6px}.lbl:first-child{margin-top:0}
+.seg{display:flex;gap:8px}
+.seg button{flex:1;font:inherit;border:1.5px solid #cfe1e8;background:#fff;border-radius:12px;padding:10px 6px;text-align:center;color:#334}
+.seg button b{display:block;font-size:16px}.seg button small{font-size:11.5px;color:#778}
+.seg button.on{border-color:var(--c);background:#e8f5fa;color:var(--d)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:14px;border:1.5px solid #cfe1e8;background:#fff;border-radius:20px;padding:6px 13px;color:#445}
+.chip.on{background:var(--c);border-color:var(--c);color:#fff}
+.actbar{position:sticky;bottom:0;display:flex;gap:8px;background:linear-gradient(transparent,var(--bg) 30%);padding:14px 0 12px;margin-top:4px;z-index:5}
+.big{flex:2;font:inherit;font-size:16px;font-weight:700;border:0;border-radius:12px;padding:14px 10px;background:var(--c);color:#fff}
+.big.ghost{flex:1;background:#fff;color:var(--d);border:1.5px solid #bcd3dc}
+.big:disabled{opacity:.4}
+.reset{text-align:center;font-size:13px}.reset a{color:#889}
+.qtop{display:flex;justify-content:space-between;align-items:center;margin:2px 0 8px}
+.xbtn{font:inherit;font-size:14px;border:0;background:none;color:#778;padding:4px 0}
+.qcnt{font-weight:700;color:var(--d)}
+.qcard{min-height:50vh}
+.qmeta{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.qtag{font-size:12px;font-weight:700;border-radius:20px;padding:2px 10px;background:#e6f3f8;color:var(--d)}
+.qtag.m{background:#fde8d8;color:#b0521d}.qtag.t{background:#ece4fb;color:#5b3aa6}
+.qcat{font-size:12px;color:#99a}
+.qtext{font-size:18px;font-weight:700;line-height:1.5;margin-bottom:14px}
+.opt2{display:flex;align-items:center;gap:10px;width:100%;text-align:left;font:inherit;font-size:15.5px;border:1.5px solid #d6e6ec;background:#fbfdfe;border-radius:12px;padding:12px;margin:8px 0;color:#223}
+.opt2 .ltr{flex:0 0 28px;height:28px;border-radius:50%;background:#e6f3f8;color:var(--d);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.opt2 span:nth-child(2){flex:1}
+.opt2 .ck{flex:0 0 24px;height:24px;border-radius:6px;border:1.5px solid #bcd3dc;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+.opt2.sel{border-color:var(--c);background:#e8f5fa}.opt2.sel .ltr{background:var(--c);color:#fff}.opt2.sel .ck{background:var(--c);border-color:var(--c)}
+.opt2.right{border-color:var(--ok);background:#e9f6ee}.opt2.right .ltr{background:var(--ok);color:#fff}
+.opt2.wrong{border-color:var(--no);background:#fbeaea}.opt2.wrong .ltr{background:var(--no);color:#fff}
+.opt2:disabled{opacity:1}
+#qz textarea{width:100%;min-height:90px;font:inherit;font-size:15.5px;padding:10px;border-radius:12px;border:1.5px solid #cfe1e8}
+.fb{margin-top:12px;padding:12px 14px;border-radius:12px;background:#f2f7f9;font-size:15px}
+.fb.okb{background:#e9f6ee}.fb.nob{background:#fbeaea}
+.fbh{font-weight:700;margin-bottom:4px}.fbe{color:#556;font-size:14px;margin-top:6px}
+.selfq{font-weight:700;margin:10px 0 6px;font-size:14px}
+.seg2{display:flex;gap:8px}.seg2 button{flex:1;font:inherit;padding:10px;border-radius:10px;border:1.5px solid #cfe1e8;background:#fff}
+.seg2 button.on.ok{background:var(--ok);border-color:var(--ok);color:#fff}.seg2 button.on.no{background:var(--no);border-color:var(--no);color:#fff}
+.res{text-align:center;padding:22px 16px}
+.ring{--p:0;width:150px;height:150px;border-radius:50%;margin:0 auto 12px;background:conic-gradient(var(--c) calc(var(--p)*1%),#e3eef3 0);display:flex;align-items:center;justify-content:center}
+.res.fail .ring{background:conic-gradient(#e08a3c calc(var(--p)*1%),#e3eef3 0)}
+.ring span{width:118px;height:118px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:800;color:var(--d)}
+.ring small{font-size:18px}
+.rmsg{font-size:17px;font-weight:700;margin-bottom:4px}.rsub{font-size:13.5px;color:#667}
+.crow{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:14px}.crow span{flex:0 0 44px}.crow b{flex:0 0 40px;text-align:right;color:var(--d)}
+details.wr{background:#fbfcfd;border:1px solid #e1ecf1;box-shadow:none;margin:6px 0}
+details.wr summary{font-size:14.5px;color:#334;font-weight:600}
+.wb{font-size:14px;padding:0 14px 12px!important}.wb>div{margin:4px 0}
+.mine{display:inline-block;font-size:12px;font-weight:700;background:#fbeaea;color:var(--no);border-radius:6px;padding:0 6px;margin-right:4px}
+.rt{display:inline-block;font-size:12px;font-weight:700;background:#e9f6ee;color:var(--ok);border-radius:6px;padding:0 6px;margin-right:4px}
+#toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:rgba(30,40,50,.9);color:#fff;padding:9px 16px;border-radius:20px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:50}
+#toast.show{opacity:1}
+.qtag.ox{background:#e3f5e9;color:#1a8f4c}.qtag.mt{background:#fff1c9;color:#8a6200}
+.mrow{border:1.5px solid #d6e6ec;border-radius:12px;padding:10px 12px;margin:8px 0;background:#fbfdfe}
+.mrow .ml{font-weight:700;margin-bottom:6px;color:#223}
+.mrow select{width:100%;font:inherit;font-size:15px;padding:9px;border-radius:9px;border:1.5px solid #cfe1e8;background:#fff}
+.mrow.right{border-color:var(--ok);background:#e9f6ee}.mrow.wrong{border-color:var(--no);background:#fbeaea}
+.mfix{font-size:13.5px;color:var(--ok);font-weight:700;margin-top:6px}
+
+/* ===== modern theme override ===== */
+:root{--c:#0e7490;--d:#0f172a;--bg:#f6f7f9;--ok:#15803d;--no:#dc2626;--line:#e5e7eb;--mute:#64748b}
+body{font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;background:var(--bg);color:#1e293b;letter-spacing:-.01em;-webkit-text-size-adjust:100%}
+body{overflow-x:clip}
+header{background:#fff;color:var(--d);padding:22px 18px 16px;border-bottom:1px solid var(--line)}
+.hwrap{max-width:760px;margin:0 auto}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c)}
+header h1{font-size:24px;font-weight:800;margin:4px 0 2px;letter-spacing:-.02em}
+.hsub{margin:0;font-size:13px;color:var(--mute)}
+.kakao{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;font-weight:600;color:#3c1e1e;text-decoration:none;background:#fee500;padding:6px 12px;border-radius:999px}
+nav{position:sticky;top:0;z-index:9;display:flex;overflow:hidden;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+nav button{flex:1 1 0;min-width:0;white-space:nowrap;padding:12px 1px 10px;font-size:clamp(12px,3.5vw,14px);color:var(--mute);border:0;border-bottom:2px solid transparent;background:none;font-family:inherit}
+nav button.on{color:var(--d);font-weight:700;border-bottom-color:var(--d)}
+main{padding:16px 14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:none;padding:16px}
+h2{font-size:17px;font-weight:800;color:var(--d);letter-spacing:-.02em}
+h3{color:var(--d)}
+.tip{background:#f1f5f9;border:0;border-radius:12px;color:#334155;padding:12px 14px}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:none}
+details summary{color:var(--d);font-weight:700;padding:14px 16px}
+details summary::before{content:"";display:inline-block;width:7px;height:7px;border-right:2px solid var(--mute);border-bottom:2px solid var(--mute);transform:rotate(-45deg);margin:0 10px 2px 0;transition:transform .2s}
+details[open] summary::before{content:"";transform:rotate(45deg)}
+.ans{background:#f8fafc;border-left:3px solid var(--c);border-radius:10px}
+table{border-radius:12px;overflow:hidden;font-size:14px}
+td,th{border:0;border-bottom:1px solid var(--line);padding:9px 10px}
+th{background:#f8fafc;color:#334155;font-weight:700}
+.fc{color:var(--d)}
+.srch{top:41px;background:var(--bg)}
+.toc a{color:var(--c)}
+.full h2.mh1{background:none;color:var(--d);border-bottom:2px solid var(--d);border-radius:0;padding:0 0 6px}
+.full h3.mh2{border-bottom:1px solid var(--line)}
+.full blockquote{background:#f8fafc;border-left:3px solid var(--c)}
+footer{color:#94a3b8}
+footer a{color:var(--c);font-weight:600;text-decoration:none}
+/* quiz refinements */
+.stat3>div{background:#f8fafc;border:1px solid var(--line)}
+.stat3 b{color:var(--d)}
+.seg button{border:1px solid var(--line);border-radius:12px}
+.seg button.on{border-color:var(--d);background:#f8fafc;color:var(--d);box-shadow:inset 0 0 0 1px var(--d)}
+.chip{border:1px solid var(--line)}
+.chip.on{background:var(--d);border-color:var(--d)}
+.big{background:var(--d);border-radius:14px}
+.big.ghost{border:1px solid var(--line)}
+.opt2{border:1px solid var(--line);background:#fff}
+.opt2 .ltr{background:#f1f5f9;color:#334155}
+.opt2.sel{border-color:var(--d);background:#f8fafc;box-shadow:inset 0 0 0 1px var(--d)}
+.opt2.sel .ltr,.opt2.sel .ck{background:var(--d);border-color:var(--d);color:#fff}
+.qtag{background:#f1f5f9;color:#334155}
+.qtag.m{background:#fff7ed;color:#c2410c}.qtag.t{background:#f5f3ff;color:#6d28d9}.qtag.ox{background:#f0fdf4;color:#15803d}.qtag.mt{background:#fefce8;color:#a16207}
+.pbar{background:#eef2f6}.pbar i{background:var(--d)}
+.ring{background:conic-gradient(var(--d) calc(var(--p)*1%),#eef2f6 0)}
+.mrow{border:1px solid var(--line);background:#fff}
+.actbar{background:linear-gradient(rgba(246,247,249,0),var(--bg) 35%)}
+/* desktop / tablet */
+nav{padding:0 max(0px,calc((100% - 760px)/2))}
+@media (min-width:768px){
+  header{padding:34px 24px 22px}
+  header h1{font-size:30px}
+  .hsub{font-size:14px}
+  nav button{font-size:15px;padding:14px 4px 12px}
+  main{padding:24px 20px 40px}
+  .card{padding:20px 22px}
+  .qtext{font-size:20px}
+  .opt2{padding:14px 16px}
+  .opt2:hover{border-color:#94a3b8}
+  .chip:hover,.seg button:hover{border-color:#94a3b8}
+  nav button:hover{color:var(--d)}
+  .actbar{position:static;background:none;padding:16px 0}
+  .big{flex:0 1 240px}.big.ghost{flex:0 1 140px}
+  .actbar{justify-content:flex-end}
+  .qcard{min-height:auto}
+  #toast{bottom:40px}
+  .srch{top:47px}
+}
+
+footer{font-size:12px;color:#888;text-align:center;padding:18px 12px 70px}
+</style></head><body>
+<header><div class="hwrap"><div class="eyebrow">Cebu · Yeondu Dive</div><h1>AIDA2 이론 공부장</h1><p class="hsub">AIDA2 Freediver Manual v2.2 (2026) 기준 한글 정리</p><a class="kakao" href="https://pf.kakao.com/_metyn" target="_blank" rel="noopener">연두쌤 카카오톡 채널 →</a></div></header>
+<nav><button data-t="key" class="on">핵심</button><button data-t="ch">요약</button><button data-t="num">숫자</button><button data-t="rev">복습</button><button data-t="word">용어</button><button data-t="quiz">모의고사</button></nav>
+<main>
+<section id="quiz"><div id="qz"></div></section>
+<section id="key" class="on"><div class="tip"><b>공부 순서</b> 핵심 → 요약(7장 안전 중점) → 숫자 → 복습 → 용어 → 모의고사</div><div class="card"><h2>꼭 외울 한 줄 10개</h2>
+<ul>
+<li><b>안전 1원칙</b>: 절대 혼자 다이빙하지 않는다. 항상 자격 있는 버디와 함께.</li>
+<li>숨 참기 괴로운 이유는 <b>산소 부족이 아니라 CO2 증가</b> 때문.</li>
+<li><b>과호흡은 산소를 늘리지 못한다.</b> CO2만 낮춰서 경고 신호 없이 블랙아웃이 올 수 있다.</li>
+<li>다이빙 준비의 목적은 산소 채우기가 아니라 <b>몸과 마음의 이완</b>.</li>
+<li>물속에서 <b>숨을 내쉬지 않는다.</b> 공기가 새는 건 블랙아웃 신호로 본다.</li>
+<li>모든 다이빙은 <b>리커버리 호흡 최소 3번 + OK 사인</b>으로 끝난다.</li>
+<li>이퀄라이징은 <b>아프기 전에, 살살, 자주</b>. 절대 힘으로 하지 않는다.</li>
+<li>한 번 상승을 시작하면 <b>끝까지 수면으로 올라간다</b> (다시 내려가지 않음).</li>
+<li>블랙아웃 구조 = <b>SAFE</b> (수면으로, 기도 확보, 얼굴 장비 제거) → <b>BTT</b> (불기·두드리기·말하기)</li>
+<li>LMC나 블랙아웃을 겪으면 <b>그날 다이빙은 끝</b>. 24시간 정도 쉬고 원인을 찾는다.</li>
+</ul>
+
+</div></section>
+<section id="ch"><p style="font-size:14px;color:#666;margin:0 0 10px">장을 눌러 펼쳐 보세요. 7장 안전이 가장 많이 나와요.</p><details class="ch"><summary>1장 · 프리다이빙 소개</summary>
+<ul>
+<li>숨 참고 물에 들어가는 순간부터 모든 안전 규칙이 적용된다. 수영장, 욕조도 마찬가지.</li>
+<li>AIDA는 1992년부터 프리다이빙 안전 기준을 만들어 온 국제단체.</li>
+<li>지역 커뮤니티와 친해지는 방법: AIDA 행사·대회 자원봉사.</li>
+</ul>
+
+</details>
+<details class="ch"><summary>2장 · AIDA2 과정</summary>
+<ul>
+<li>과정을 한 강사에게 시작해서 <b>다른 강사에게 마쳐도 된다</b>. 단, <b>1년 안에</b> 이어서 해야 한다.</li>
+<li>EOS(온라인 시스템) 프로필 정보는 정확하게, 바뀌면 업데이트.</li>
+<li><b>건강확인서(Medical statement)</b>: 모든 질문에 "NO"면 나라에 따라 바로 시작 가능(일부 나라는 의사 진단서 요구). 하나라도 "YES"면 의사 소견서가 필요. 수술 이력, 가벼운 천식도 솔직하게.</li>
+<li><b>면책동의서(Liability release)</b>: 프리다이빙의 위험과 본인 책임을 이해했다는 서명. 수료보다 안전이 항상 우선.</li>
+</ul>
+
+</details>
+<details class="ch"><summary>3장 · 기초 생리학</summary>
+<ul>
+<li>공기 경로: 코·입 → 기관(trachea) → 기관지(bronchi) → 세기관지(bronchioles) → <b>폐포(alveoli, 가스 교환 장소)</b></li>
+<li>주요 호흡근: <b>횡격막(diaphragm)</b>과 <b>늑간근(intercostal)</b></li>
+<li>CO2가 피에 녹으면 혈액이 산성으로 변함 → 뇌간 등 화학수용체가 감지 → 숨을 더 깊고 빠르게 쉬게 함. <b>호흡은 주로 CO2가 조절</b>하고 O2의 영향은 훨씬 작다.</li>
+<li>O2 센서는 신호가 늦고 약하다. CO2 신호는 빨리, 분명하게 온다 → CO2 신호가 안전한 "연료계".</li>
+<li><b>수축(contractions)</b>: 호흡근의 불수의적 움직임. CO2를 내보내려는 몸의 시도일 뿐, 시작됐다고 반드시 산소가 부족하다는 뜻은 아니다. 싸우지 말고 이완하며 받아들인다.</li>
+<li>평소 산소포화도는 이미 <b>96~99%</b>. 과호흡해도 거의 안 오른다 (가득 찬 컵에 물을 더 못 붓는 것과 같음).</li>
+<li>과호흡의 다른 해: 심박 증가, 뇌 혈류 감소, 팔다리 혈류 증가(산소 소모 증가).</li>
+<li>과호흡 증상: 들뜸, 손발 저림, 어지러움, 입 주변 마비감, 쇠맛, 손 반마비 → 증상 있으면 다이빙 중단하고 다시 이완.</li>
+<li>안전하게 오래 참는 법: <b>CO2 내성 키우기, 이완, 기술(자세·덕다이브·핀킥) 다듬기</b>.</li>
+</ul>
+
+</details>
+<details class="ch"><summary>4장 · 프리다이빙 호흡 사이클</summary>
+<ul>
+<li>4단계: <b>① 이완 → ② 풀 브레스(한 번의 큰 숨) → ③ 숨 참기 → ④ 리커버리 호흡</b></li>
+<li>특별한 "브리드업"은 필요 없다. 이미 산소가 꽉 차 있다.</li>
+<li>이완 단계: 물 밖 스트레칭 10~15분, 물속에서 매 다이빙 전 1~2분. <b>복식호흡</b>으로 자연스럽게, 숨의 깊이나 속도를 일부러 바꾸지 않는다. 생각도 산소를 쓴다.</li>
+<li>이완 기법 예: 바디스캔(발끝부터 몸을 하나씩 풀기).</li>
+<li>풀 브레스: 평소보다 조금 더 내쉰 뒤 <b>배(횡격막) 먼저 → 가슴</b> 순서로 천천히. <b>용량보다 이완이 우선</b>. 큰 숨은 딱 한 번. 다 마시면 성문(glottis)을 닫고 힘을 뺀다.</li>
+<li>숨 참기: 숨 쉬고 싶은 충동은 CO2 때문이고 산소는 아직 충분. 수축을 "타이머"처럼 써서 조금씩 늘린다. 한계를 찾는 게 목적이 아니다.</li>
+<li>숨 참기는 신체보다 <b>정신적인 도전</b>. 그만두라는 핑계가 떠올라도 관찰하고 흘려보낸다.</li>
+<li><b>리커버리 호흡</b>: 편하게 수동적으로 반쯤 내쉬기 → 빠르고 강하게 꽉 들이마시기("hope" 발음하듯) → 잠깐 머금기. <b>최소 3회</b> 반복 후 OK 사인. 부이·벽을 잡고, 말하지 않고, 스노클 없이 입으로. 마스크는 OK 사인 후에 벗어도 된다.</li>
+</ul>
+
+</details>
+<details class="ch"><summary>5장 · 이퀄라이징</summary>
+<ul>
+<li>수면 1bar, <b>10m마다 1bar 증가</b> → 10m = 2bar, 20m = 3bar (스테빈 법칙)</li>
+<li><b>보일의 법칙</b>: 온도가 일정하면 기체 부피는 절대압력에 반비례. 10m에서 공기 공간 부피는 절반.</li>
+<li>이퀄라이징 = 공기 공간(귀, 부비동, 마스크)에 공기를 넣어 수압에 맞서 부피를 유지하는 것.</li>
+<li>압력이 느껴지면 바로 이퀄라이징. <b>아플 때까지 내려가지 않는다.</b></li>
+<li>마스크: 코로 살짝 숨을 넣어준다. 상승할 때는 따로 할 필요 없음(공기가 알아서 빠짐).</li>
+<li>폐는 따로 이퀄라이징하지 않는다. 가슴·배를 이완해서 줄어들게 둔다. 깊은 곳에서 힘쓰기·긴장·강한 수축은 피한다.</li>
+<li><b>발살바</b>: 코 막고 배·가슴 힘으로 내쉬기. 스쿠버에선 OK지만 프리다이빙엔 비효율, <b>8~10m</b>보다 깊은 다이빙에는 권장되지 않는다.</li>
+<li><b>프렌젤</b>: 성문 닫고 <b>혀를 피스톤처럼</b> 써서 압력 만들기. 배가 말랑한 상태로 되면 프렌젤. 프리다이빙의 "맥가이버 칼".</li>
+<li><b>핸즈프리(BTV/VTO)</b>: 코를 안 잡고 근육으로 이관을 여는 방식. 부드럽지만 불안정할 수 있다.</li>
+<li>이퀄라이징을 돕는 방법: 정확한 기술, <b>바깥귀에 물 채우기</b>(후드 안 공기 빼기), 살살 자주, 하강 속도 줄이기·멈추기, 건강할 때만 다이빙(코막힘이면 쉬기), <b>처방 없는 충혈제거제 금지</b>, 다이빙 전 스트레칭, 목은 중립(살짝 턱 들기 OK).</li>
+<li>다이빙 전 피할 음식: 너무 기름지거나 매운 것, 유제품, 술, 카페인, 설탕.</li>
+<li>귀 통증·이명·먹먹함이 있으면 24시간 안에 이비인후과. 면봉 금지.</li>
+</ul>
+
+</details>
+<details class="ch"><summary>6장 · 프리다이빙 기술</summary>
+<ul>
+<li><b>덕다이브 준비</b>: 이완 → 풀 브레스 → <b>스노클 빼기</b> → <b>미리 이퀄라이징</b> → 덕다이브</li>
+<li>덕다이브만으로 머리가 <b>약 5m</b>까지 내려가니 수면에서 미리 이퀄라이징한다.</li>
+<li>덕다이브 순서: 수면에서 길게 뻗기 → 허리 접기(90도) → 팔 당기기(평영처럼) → 이퀄라이징 → 킥</li>
+<li>시선: 덕다이브 전엔 바로 아래, 입수 후엔 바로 앞의 줄을 본다(가는 방향을 보지 않음). 머리는 몸통과 일직선.</li>
+<li>핀킥: <b>엉덩이(고관절)에서 시작</b>, 다리는 쭉 편다. 무릎으로 차는 "자전거 킥"은 실수. 힘과 유연성은 <b>수영장 다이내믹 연습</b>(+헬스 운동)으로 키운다.</li>
+<li>하강 3요소: <b>유선형(streamlining), 이퀄라이징, 이완</b></li>
+<li>턴: 엄지를 위로 해서 줄을 잡고 <b>앞으로 구르는 턴(forward tumble)</b>. 등을 젖히는 턴은 깊은 곳에서 폐 부상 위험.</li>
+<li>상승: 머리 일직선 유지(위를 보면 저항 증가). 일찍 돌아도 다시 내려가지 않는다.</li>
+<li><b>부력(아르키메데스)</b>: 처음 몇 m는 뜨고, 깊어질수록 몸·슈트가 눌려 무거워진다. 위로 올라오면 다시 가벼워져 미끄러지듯 올라온다.</li>
+<li>수면 도착 후: 부이 잡기 → 리커버리 호흡 최소 3번 → <b>OK 사인</b>(엄지·검지로 원, 나머지 세 손가락 펴기). <b>엄지 위(thumbs up)는 "올라가자"</b>라는 뜻이라 다르다.</li>
+</ul>
+
+</details>
+<details class="ch"><summary>7장 · 안전 (가장 많이 나옴)</summary>
+<ul>
+<li><b>저산소증(hypoxia)</b>: 정상 기능을 유지할 산소가 부족한 상태. 프리다이빙의 주된 위험.</li>
+<li><b>LMC(운동조절 상실, "삼바")</b>: 주로 수면에 올라온 직후. 눈·머리·손이 떨리는 경련. 심하면 기도를 물 밖에 못 둔다. 반응은 떨어지지만 의식을 완전히 잃지는 않는다.</li>
+<li><b>블랙아웃(BO)</b>: 산소 부족으로 <b>의식을 잃는 것</b>. 숨 참기 막바지나 <b>올라온 직후</b>. 어느 종목에서든 생길 수 있다. 반복하면 뇌 손상 위험, 물속이면 익사 위험.</li>
+<li>블랙아웃 전조: 귀울림, 따뜻한 느낌, 갑자기 다이빙이 쉬워짐, 터널 시야, 생각이 흐려짐, 개미가 기는 듯한 저림. 하지만 초보는 알아채기 어렵고 이미 한계에 가까울 때 나타나므로 <b>이걸 믿고 다이빙하면 안 된다</b>.</li>
+<li>안전 1단계는 <b>나 자신</b>, 2단계는 <b>버디</b>.</li>
+<li>모든 숨 참기 다이빙에는 <b>다이버 + 버디 2명</b>. 예외 없음. 사고·사망 대부분은 혼자 다이빙에서.</li>
+<li><b>원 업 원 다운</b>: 한 명이 내려가면 한 명은 수면에서 지켜본다. 버디할 땐 스노클 사용.</li>
+<li>스태틱 버디 체크 3단계: <b>요청(버디) → 응답(다이버) → 확인(버디)</b>. 예: 오른쪽 어깨를 꾹 → 오른손 검지 펴기 → 어깨 두 번 꾹. OK 사인은 힘 빠진 손과 헷갈려서 체크 응답으로는 비추천.</li>
+<li>스태틱 전 약속할 것: 체크 방법, 터치 방식, 시간 알려주기, 말 걸기 여부, 역할 순서.</li>
+<li>가장 위험한 순간은 <b>다이빙이 끝나는 순간(수면 복귀)</b>. 버디는 끝까지 가까이서 지켜본다.</li>
+<li>뎁스 버디: 수면에서 줄의 장력으로 하강·턴을 느끼고, 내려가서 <b>마지막 10m를 함께 상승</b>. 다이버 <b>정면, 약 1m 아래</b>에 위치해 눈을 본다. 얕은 다이빙은 바닥 턴을 느끼면 출발하면 중간쯤에서 만난다.</li>
+<li>도움이 필요한 신호: 핀킥이 흐트러지거나 느려짐, <b>막판에 빨라짐</b>, 초점 없는 눈, 불안하게 줄을 잡음, <b>공기가 샘</b>, 수면에서 기도를 못 지킴.</li>
+<li><b>LMC 구조</b>: 기도를 물 밖으로 받치기 → 필요하면 마스크 벗기고 얼굴에 바람 → 리커버리 호흡 유도 → 부상 확인 → 그날 다이빙 중단 안내</li>
+<li><b>블랙아웃 구조 SAFE</b>: <b>S</b>urface(수면으로, 깊으면 둘 다 웨이트벨트 풀기, 뒤에서 접근해 코·입을 막는 샌드위치 자세) → <b>A</b>irways(기도를 물 밖에) → <b>F</b>acial <b>E</b>quipment(마스크·고글·노즈클립 제거)</li>
+<li>물속에서 블랙아웃이었다면 수면 도착 즉시 <b>구조호흡 2회</b>.</li>
+<li><b>BTT</b>: <b>Blow</b>(눈·코 주변에 세게 불기, 가장 효과적) → <b>Tap</b>(뺨을 가볍게 두드리기) → <b>Talk</b>("지호야, 숨 쉬어!"처럼 이름 부르기). <b>최대 10~15초</b> → 안 깨면 구조호흡(<b>입-코 방식</b>) <b>최대 5회</b>.</li>
+<li>BTT + 구조호흡 <b>최대 30초</b> 안에 회복 안 되면: 도움 요청 → <b>CPR</b> → 응급구조 연락.</li>
+<li>위험 줄이는 법: 버디와 함께, 한계까지 밀지 않기, 천천히 늘리기(<b>AIDA2는 최대 20m</b>), 이완, 리커버리 호흡, 좋은 기술, <b>수분 섭취</b>, <b>올바른 웨이트</b>(수면에서 다 내쉬어도 가라앉지 않을 정도, 마지막 10m는 양성부력), <b>내려가기 전 스노클 빼기</b>, 부이 사용, 랜야드(줄 연습 땐 항상 강력 권장, 특히 20m보다 깊거나 시야 10m 미만일 때), 구조 연습.</li>
+<li><b>감압질환(DCI, 감압병 DCS는 그 한 종류)</b>: 프리다이버도 걸릴 수 있다. 위험요소는 빈도·깊이·시간.</li>
+<li><b>수면 휴식</b>: 직전 다이빙 시간의 <b>최소 3배</b> (1분 다이빙 → 3분 휴식, 버디하러 내려갈 때도 적용)</li>
+<li>스쿠버 → 프리다이빙: 1회 후 <b>12시간</b>, 여러 번·감압다이빙 후 <b>24시간</b>. 프리다이빙 → 스쿠버: <b>12시간</b>. No-fly 표시가 꺼질 때까지 기다리기.</li>
+<li>깊은 곳에서 스쿠버 다이버가 주는 공기는 <b>절대 받지 않는다</b> (폐 과팽창 위험).</li>
+</ul>
+
+</details>
+<details class="ch"><summary>8장 · 장비</summary>
+<ul>
+<li><b>마스크</b>: 코가 덮여 있고, 얼굴에 딱 맞고, <b>내부 용적이 작고</b>, 렌즈가 투명하고, 스커트가 부드러운 것.</li>
+<li><b>핀</b>: 초보는 <b>짧은 핀</b>으로 기술부터. 기술·근력·유연성이 생기면 긴 핀. 풋포켓은 아프지 않게 꼭 맞게.</li>
+<li><b>스노클</b>: 수면에서 쉬거나 버디를 지켜볼 때 숨쉬기용. 다이빙 시작 전에는 입에서 뺀다.</li>
+<li><b>웨이트벨트</b>: 허리가 아니라 <b>골반(엉덩이) 위치</b>에. 뒤집혀도 안 움직일 만큼 조이고, 비상시 쉽게 풀 수 있게.</li>
+<li><b>슈트</b>: 부드럽고 신축성 있어야 편하고 이완된 움직임이 가능.</li>
+<li>기타: 랜야드(줄에 연결), 부이(휴식·신호·줄 고정), 바텀 웨이트, 랜야드 스토퍼, 바텀 플레이트.</li>
+<li><b>웨이트벨트 추가</b>: 실리콘·고무처럼 신축성 있는 재질, 큰 추 몇 개보다 <b>작은 추 여러 개</b>, <b>한 손으로 풀리는 퀵릴리즈</b> 버클.</li>
+<li><b>마스크 김서림</b>: 새 마스크는 렌즈 기름막 제거(라이터로 그을리기, 주방세제·치약으로 닦기). 스노클은 마스크에 달지 않는 게 권장.</li>
+<li><b>랜야드</b>: 엉키면 바로 풀 수 있는 퀵릴리즈 필수. 손목에 차면 끌어올릴 때 가장 유선형.</li>
+</ul>
+
+</details>
+<details class="ch"><summary>9장 · 종목 추가</summary>
+<ul>
+<li><b>컨스턴트 웨이트(CWT/CWTB/CNF)</b>: 가지고 내려간 무게를 그대로 가지고 올라온다. 바닥 턴에서 <b>줄은 한 번만 당길 수 있다</b>(대회 규칙).</li>
+<li><b>VWT(베리어블 웨이트)</b>: 썰매 같은 무게 장치로 내려가고 스스로 올라온다. 대회 종목 아님, 개인 기록 시도만 인정.</li>
+<li><b>NLT(노 리밋)</b>: 썰매로 내려가고 리프트백 등으로 올라온다. 영화 '그랑블루'. 안전 문제로 AIDA는 완전히 폐지.</li>
+</ul>
+
+</details>
+<details class="ch"><summary>10장 · AIDA 그린 (환경)</summary>
+<ul>
+<li>바다는 지구 표면의 71%, 물의 97%, 우리가 마시는 <b>산소의 70%</b>를 만들고 CO2 배출의 1/3을 흡수한다.</li>
+<li>일회용 플라스틱 거절, 텀블러 사용, 장비는 샤워하며 헹구기, 가까운 곳에서 다이빙.</li>
+<li>슈트 입을 때 비누 대신 물속에서 입기(아니면 생분해 비누). <b>화학 선크림 금지</b>, 안전한 성분은 논나노 산화아연·이산화티타늄·식물성 오일, 래시가드 추천.</li>
+<li>동물을 <b>쫓지 않기, 먹이 주지 않기, 만지지 않기</b>(보호 점액 손상). 바닥 모래를 일으키지 않기. 스피어피싱은 멸종위기종 금지, 필요한 만큼만.</li>
+<li><b>Take nothing</b>: 조개껍데기·산호 가져오지 않기, 바다 유래 기념품 사지 않기. <b>Leave nothing</b>: 쓰레기 되가져오기, 매 다이빙을 클린업 다이빙으로.</li>
+<li>지역 공동체를 돕는 에코투어 업체 선택, 지역 규칙·입장료 지키기.</li>
+</ul>
+
+</details>
+<details class="ch"><summary>11장 · 프리다이버 행동규범</summary>
+<ul>
+<li>환경 존중 / 해양생물 존중 / 바다에서 아무것도 가져오지 않기 / 바다에 아무것도 남기지 않기 / 자신을 존중하고 책임감 있게 / 안전하게 다이빙하고 모범이 되기</li>
+</ul>
+
+
+</details>
+<details class="ch"><summary>9장 · 종목</summary>
+<table>
+<tr><th>약자</th><th>이름</th><th>내용</th></tr>
+<tr><td>STA</td><td>스태틱</td><td>수영장 수면에 엎드려 가만히 숨 참기. 시간으로 측정</td></tr>
+<tr><td>DYN / DYNB</td><td>다이내믹</td><td>물속에서 수평 거리. DYN=모노핀, DYNB=바이핀. 자세·핀킥·CO2 내성 훈련에 좋음</td></tr>
+<tr><td>DNF</td><td>다이내믹 노핀</td><td>핀 없이 팔다리로 수평 거리</td></tr>
+<tr><td>FIM</td><td>프리 이머전</td><td>줄을 당겨 내려가고 올라오기. 힘을 거의 안 써서 뎁스 세션 시작(워밍업)에 가장 흔함</td></tr>
+<tr><td>CWT / CWTB</td><td>컨스턴트 웨이트</td><td>핀으로 내려가고 올라오기 (CWT=모노핀, CWTB=바이핀)</td></tr>
+<tr><td>CNF</td><td>컨스턴트 노핀</td><td>핀 없이 수직 다이빙</td></tr>
+</table>
+
+</details></section>
+<section id="num"><div class="card"><h2>숫자 암기표</h2>
+<table>
+<tr><th>숫자</th><th>의미</th></tr>
+<tr><td>75%</td><td>필기시험 합격 기준</td></tr>
+<tr><td>1년</td><td>다른 강사와 과정을 이어서 끝낼 수 있는 기한</td></tr>
+<tr><td>96~99%</td><td>평소 혈중 산소포화도 (과호흡해도 그대로)</td></tr>
+<tr><td>10~15분</td><td>물 밖 스트레칭·이완</td></tr>
+<tr><td>1~2분</td><td>물속에서 매 다이빙 전 이완</td></tr>
+<tr><td>최소 3번</td><td>리커버리 호흡 횟수 (그 후 OK 사인)</td></tr>
+<tr><td>10m마다 1bar</td><td>수압 증가 (10m=2bar, 20m=3bar)</td></tr>
+<tr><td>8~10m</td><td>이보다 깊으면 발살바는 권장되지 않음</td></tr>
+<tr><td>약 5m</td><td>덕다이브만으로 내려가는 깊이 → 미리 이퀄라이징</td></tr>
+<tr><td>24시간</td><td>귀 이상 시 이비인후과 / LMC·BO 후 휴식</td></tr>
+<tr><td>마지막 10m</td><td>버디가 함께 올라오는 구간 / 양성부력 유지 구간</td></tr>
+<tr><td>1m 아래, 정면</td><td>세이프티 버디 위치</td></tr>
+<tr><td>10~15초</td><td>BTT 최대 시간</td></tr>
+<tr><td>2회</td><td>물속 블랙아웃이면 수면 도착 즉시 구조호흡</td></tr>
+<tr><td>최대 5회</td><td>BTT 후 구조호흡(입-코)</td></tr>
+<tr><td>30초</td><td>BTT+구조호흡으로 안 깨면 CPR·119</td></tr>
+<tr><td>20m</td><td>AIDA2 자격 최대 수심</td></tr>
+<tr><td>20m 초과 / 시야 10m 미만</td><td>랜야드 특히 강력 권장 (줄 연습 땐 항상 권장)</td></tr>
+<tr><td>3배</td><td>수면 휴식 = 직전 다이빙 시간 × 3</td></tr>
+<tr><td>12시간</td><td>스쿠버 1회 후 프리다이빙 / 프리다이빙 후 스쿠버</td></tr>
+<tr><td>24시간</td><td>스쿠버 여러 번·감압다이빙 후 프리다이빙</td></tr>
+</table>
+
+</div></section>
+<section id="rev"><p style="font-size:14px;color:#666;margin:0 0 10px">교재 부록 A의 공식 복습문제 정답을 옮겼어요. 문제를 보고 답을 떠올린 다음 눌러서 확인하세요.</p>
+
+
+<details class="qa"><summary>Q1. 안전한 프리다이빙의 제1원칙은?</summary><div class="ans">항상 자격 있는 버디와 함께 다이빙한다.</div></details>
+<details class="qa"><summary>Q2. 지역 프리다이빙 커뮤니티와 연결되는 방법은?</summary><div class="ans">AIDA 행사·대회에 자원봉사하기.</div></details>
+<details class="qa"><summary>Q3. 한 강사와 시작한 과정은 같은 강사와 끝내야 한다. O/X?</summary><div class="ans">X. 다른 강사와 끝내도 된다. 단 1년 안에 이어서 해야 한다.</div></details>
+<details class="qa"><summary>Q4. 들숨 때 공기의 경로는?</summary><div class="ans">코·입 → 기관 → 두 개의 주기관지 → 세기관지 → 폐포(가스 교환).</div></details>
+<details class="qa"><summary>Q5. 호흡에 쓰이는 주요 근육은?</summary><div class="ans">횡격막과 늑간근.</div></details>
+<details class="qa"><summary>Q6. 호흡은 주로 CO2가 조절한다. 설명하면?</summary><div class="ans">활동하면 CO2가 생기고 혈액이 산성으로 변한다. 몸이 이를 감지해 호흡의 양과 횟수를 늘려 CO2를 내보낸다.</div></details>
+<details class="qa"><summary>Q7. 과호흡은 혈중 산소포화도를 높인다. O/X?</summary><div class="ans">X. 포화도는 이미 96~99%. 과호흡은 산소를 늘리지 못하고 CO2만 낮춘다.</div></details>
+<details class="qa"><summary>Q8. 혈중 CO2를 낮추면 생기는 위험은?</summary><div class="ans">CO2 경고 신호를 못 느낀 채 산소 부족으로 의식을 잃을 수 있다.</div></details>
+<details class="qa"><summary>Q9. 다이빙 시간을 안전하게 늘리는 법은?</summary><div class="ans">CO2 내성 키우기, 이완 향상, 기술(자세·덕다이브·핀킥) 다듬기.</div></details>
+<details class="qa"><summary>Q10. 숨 참기 준비는 산소를 채우는 게 목적이 아니다. O/X?</summary><div class="ans">O. 산소포화도는 이미 거의 최대. 마지막 준비는 몸과 마음의 이완, 집중에 둔다.</div></details>
+<details class="qa"><summary>Q11. 이완 단계의 목표는?</summary><div class="ans">불필요한 근육 긴장 없이 몸과 마음을 이완하고 집중 유지. 생각도 산소를 쓴다.</div></details>
+<details class="qa"><summary>Q12. 풀 브레스 할 때 핵심은?</summary><div class="ans">① 이완 유지(너무 많이 마시려다 긴장하지 않기) ② 시간을 들여 폐를 완전히 채우기 ③ 2단계: 배(횡격막) 먼저, 그다음 가슴.</div></details>
+<details class="qa"><summary>Q13. 공기가 새는 것이 위험 신호인 이유는?</summary><div class="ans">블랙아웃이 오면 폐에 공기를 붙잡고 있지 못한다. 그래서 물속에서 내쉬는 건 미리 약속한 훈련 외에는 하지 않는다.</div></details>
+<details class="qa"><summary>Q14. 수축(contractions)이란?</summary><div class="ans">호흡근의 불수의적 움직임. 쌓인 CO2를 내보내려는 몸의 시도이며, 시작됐다고 반드시 산소가 부족하다는 뜻은 아니다.</div></details>
+<details class="qa"><summary>Q15. 숨 참기가 정신적 도전인 이유는?</summary><div class="ans">몸이 숨을 안 쉬는 데 익숙하지 않아 마음이 그만둘 핑계를 만든다. 긍정적인 상태라면 이를 다루고 이어가도록 훈련할 수 있다.</div></details>
+<details class="qa"><summary>Q16. 리커버리 호흡이 중요한 안전 습관인 이유는?</summary><div class="ans">숨 참기를 제대로 끝내는 기술이다. 모든 숨 참기는 리커버리 호흡으로 끝낸다. 편하게 수동적으로 반쯤 내쉰 뒤 빠르고 꽉 들이마신다.</div></details>
+<details class="qa"><summary>Q17. 보일의 법칙은?</summary><div class="ans">온도가 일정할 때 기체의 부피는 절대압력에 반비례한다.</div></details>
+<details class="qa"><summary>Q18. 이퀄라이징이란?</summary><div class="ans">하강하며 수압 때문에 눌리는 공기 공간(귀, 부비동, 마스크)에 공기를 넣어 균형을 맞추는 것.</div></details>
+<details class="qa"><summary>Q19. 이퀄라이징 연습 때 집중할 점은?</summary><div class="ans">선택한 방법에 필요한 근육만 쓰고 나머지는 전부 이완한다.</div></details>
+<details class="qa"><summary>Q20. 이퀄라이징을 돕는 방법 3가지는?</summary><div class="ans">정확한 기술, 바깥귀에 물 채우기, 살살 자주 하기, 하강 속도 줄이기, 건강할 때 다이빙, 충혈제거제 피하기, 다이빙 전 스트레칭 (중 3개).</div></details>
+<details class="qa"><summary>Q21. 덕다이브 전에 미리 이퀄라이징하는 이유는?</summary><div class="ans">강한 덕다이브는 핀킥 전에 머리를 약 5m까지 내린다. 덕다이브 중엔 이퀄라이징이 어려우니 미리 해둬야 귀에 무리가 없다.</div></details>
+<details class="qa"><summary>Q22. 핀킥에 필요한 근력·유연성을 키우는 법은?</summary><div class="ans">수영장 종목인 다이내믹(다이내믹 앱니아) 훈련.</div></details>
+<details class="qa"><summary>Q23. 하강 때 집중할 3가지는?</summary><div class="ans">유선형, 이퀄라이징, 이완.</div></details>
+<details class="qa"><summary>Q24. 바닥에서 앞으로 구르는 턴이 좋은 이유는?</summary><div class="ans">깊은 곳에서 폐를 보호하기 위해. 다른 턴은 등을 젖히게 해 부상 위험이 커진다.</div></details>
+<details class="qa"><summary>Q25. "상승을 시작하면 끝까지 수면으로 올라가야 한다" 맞나?</summary><div class="ans">맞다. 일찍 돌았더라도 계속 올라간다. 속도·자세를 자꾸 바꾸면 집중력·에너지 낭비가 생기고 버디도 혼란스럽다.</div></details>
+<details class="qa"><summary>Q26. OK 사인의 뜻은?</summary><div class="ans">엄지·검지로 원을 만들고 나머지 세 손가락을 편 손짓. 다이빙 후 괜찮다는 신호.</div></details>
+<details class="qa"><summary>Q27. 버디 팀 소통이 중요한 이유는?</summary><div class="ans">세션 계획을 함께 맞추고, 매 다이빙 목표를 공유하고, 문제를 알리기 위해.</div></details>
+<details class="qa"><summary>Q28. 스태틱에서 말·비언어 소통을 구분하는 이유는?</summary><div class="ans">만지는 걸 싫어하는 사람, 완전한 침묵을 원하는 사람이 있다. 좋아하는 것·싫은 것·기대하는 것을 미리 말한다.</div></details>
+<details class="qa"><summary>Q29. 깊은 곳에서 버디를 만났을 때 이상 신호를 알아보는 법은?</summary><div class="ans">정면에서 눈을 본다. 핀킥 변화, 불안하게 줄 잡기, 막판 가속, 공기 샘, 수면에서 기도 유지 어려움 등.</div></details>
+<details class="qa"><summary>Q30. LMC란?</summary><div class="ans">수면 복귀 후 산소가 너무 낮을 때 생기는 저산소 증상. 가벼우면 몇 초간 눈·머리가 작게 떨리고, 심하면 온몸에 와서 기도를 물 밖에 못 둔다.</div></details>
+<details class="qa"><summary>Q31. 블랙아웃이란? 왜 특히 위험한가?</summary><div class="ans">산소 부족으로 의식을 잃는 것. 숨 참기 막바지나 올라온 직후에 생기며 어디서든 생길 수 있어 항상 버디가 필요하다. 반복되면 뇌 손상 위험.</div></details>
+<details class="qa"><summary>Q32. SAFE 원칙은?</summary><div class="ans">Surface(수면으로) · Airways(기도를 물 밖에) · Facial Equipment(마스크·고글·노즈클립 제거). 이어서 Blow-Tap-Talk를 의식이 돌아올 때까지 최대 10~15초.</div></details>
+<details class="qa"><summary>Q33. LMC·BO 위험을 줄이는 방법 5가지 이상은?</summary><div class="ans">이완, 한계까지 밀지 않기, 올바른 기술, 매번 리커버리 호흡, 충분한 수분, 항상 버디와, 올바른 웨이트(수심 10m 또는 그보다 깊은 곳에서 중성부력), 하강 전 스노클 빼기, 구조 연습, 부이 사용.</div></details>
+<details class="qa"><summary>Q34. 스쿠버와 프리다이빙 사이 간격은?</summary><div class="ans">다이브 컴퓨터 No-fly 표시가 꺼질 때까지. 스쿠버 1회 후 12시간, 여러 번·감압다이빙 후 24시간, 프리다이빙 후 스쿠버는 12시간.</div></details>
+<details class="qa"><summary>Q35. 프리다이빙 마스크의 특징은?</summary><div class="ans">코가 덮임, 얼굴에 딱 맞음, 낮은 용적, 투명 렌즈, 부드러운 스커트.</div></details>
+<details class="qa"><summary>Q36. 초보에게 맞는 바이핀은?</summary><div class="ans">짧은 핀으로 기술부터. 기술·근력·유연성이 갖춰지면 긴 핀.</div></details>
+<details class="qa"><summary>Q37. 스노클이 유용한 이유는?</summary><div class="ans">수면에서 쉬거나 버디를 지켜보면서 숨 쉴 수 있다.</div></details>
+<details class="qa"><summary>Q38. 웨이트벨트를 올바르게 차는 법은?</summary><div class="ans">허리가 아니라 골반 위치에(복식호흡·덕다이브 방해 안 되게). 거꾸로 돼도 안 움직일 만큼 조이고, 남는 끈은 비상시 쉽게 풀 수 있게 정리.</div></details>
+<details class="qa"><summary>Q39. 슈트는 유연성이 중요하다. 설명하면?</summary><div class="ans">부드럽고 신축성 있는 슈트가 편하고 이완된 움직임을 가능하게 한다.</div></details>
+<details class="qa"><summary>Q40. 스태틱(STA)의 정의는?</summary><div class="ans">수영장이나 잔잔한 물 수면에 엎드려 가만히 숨을 참는 것.</div></details>
+<details class="qa"><summary>Q41. 다이내믹 훈련이 중요한 이유는?</summary><div class="ans">자세, 핀킥 기술, CO2 내성을 키운다. 바다가 멀거나 겨울에도 깊이 다이빙을 준비할 수 있다.</div></details>
+<details class="qa"><summary>Q42. 프리 이머전이 뎁스 세션 시작에 가장 흔한 이유는?</summary><div class="ans">줄을 당겨 천천히 편한 깊이까지 내려가 힘을 거의 안 쓰고, 몸과 마음을 "프리다이빙 모드"로 바꿀 시간을 준다.</div></details>
+
+</section>
+<section id="word"><div class="card"><div class="fc" id="fc">시작</div><div class="ctrl" style="justify-content:center;margin-top:10px"><button id="fprev">◀ 이전</button><button class="btn" id="fflip">뒤집기</button><button id="fnext">다음 ▶</button></div></div><div class="card">
+<table>
+<tr><th>영어</th><th>뜻</th></tr>
+<tr><td>Buddy / Safety</td><td>함께 다이빙하며 지켜주는 사람 / 안전 다이빙</td></tr>
+<tr><td>Hypoxia</td><td>저산소증</td></tr>
+<tr><td>LMC (Loss of Motor Control)</td><td>운동조절 상실, "삼바"</td></tr>
+<tr><td>BO (Blackout)</td><td>의식 상실</td></tr>
+<tr><td>Hyperventilation</td><td>과호흡</td></tr>
+<tr><td>Contractions</td><td>호흡근 수축 (딸꾹질 같은 느낌)</td></tr>
+<tr><td>Recovery breathing</td><td>리커버리 호흡 (회복 호흡)</td></tr>
+<tr><td>Equalization</td><td>압력 평형 (귀 뚫기)</td></tr>
+<tr><td>Eustachian tube</td><td>이관 (중이와 코를 잇는 관)</td></tr>
+<tr><td>Barotrauma</td><td>압력 손상</td></tr>
+<tr><td>Duck dive</td><td>수면에서 거꾸로 입수하는 동작</td></tr>
+<tr><td>Streamlining</td><td>유선형 자세</td></tr>
+<tr><td>Buoyancy</td><td>부력</td></tr>
+<tr><td>Lanyard</td><td>다이버와 줄을 연결하는 안전끈</td></tr>
+<tr><td>Surface interval</td><td>수면 휴식 시간</td></tr>
+<tr><td>DCI / DCS</td><td>감압질환(포괄 개념) / 감압병(DCI의 한 종류)</td></tr>
+<tr><td>Rescue breath</td><td>구조호흡</td></tr>
+<tr><td>Glottis</td><td>성문 (목에서 공기를 막는 부분)</td></tr>
+</table>
+</div></section>
+<div class="full" style="display:none"></div>
+</main>
+<footer><a href="https://pf.kakao.com/_metyn" target="_blank" rel="noopener">세부프리다이빙 연두쌤 카카오톡 채널 바로가기</a><br>개인 공부용 정리 자료입니다. 정확한 내용은 AIDA 공식 교재와 담당 강사 안내를 따르세요.</footer>
+<script>
+const Q=[{"c": "기본", "t": "s", "q": "안전한 프리다이빙의 제1원칙은?", "o": ["물에 들어가기 전 충분히 스트레칭한다", "항상 자격 있는 버디와 함께 다이빙한다", "자기 한계를 정확히 알고 다이빙한다", "수영장에서는 혼자 연습해도 된다"], "a": [1], "e": "교재 1장·7장 모두 첫 규칙은 Never dive alone. 수영장·욕조에서도 마찬가지예요."}, {"c": "기본", "t": "s", "q": "한 강사와 시작한 AIDA 과정을 다른 강사와 마칠 수 있나?", "o": ["불가능하다", "가능하다, 단 1년 안에 이어서 해야 한다", "가능하다, 기한 제한 없다", "같은 나라 강사일 때만 가능하다"], "a": [1], "e": "2장: 다른 강사와 끝내도 되지만 1년 안에 이어서 해야 해요."}, {"c": "기본", "t": "s", "q": "건강확인서(Medical statement)에 'YES'가 하나라도 있으면?", "o": ["그대로 수업 가능", "강사 재량으로 진행", "의사 소견서(medical clearance)가 필요", "AIDA 본부 승인 필요"], "a": [2], "e": "YES가 하나라도 있으면 의사의 서면 소견이 있어야 시작할 수 있어요."}, {"c": "생리", "t": "s", "q": "숨 참을 때 '숨 쉬고 싶은 충동'의 주된 원인은?", "o": ["산소 부족", "이산화탄소(CO2) 증가", "폐 압력 증가", "심박 증가"], "a": [1], "e": "호흡은 주로 CO2가 조절해요. 충동이 와도 산소는 아직 충분해요."}, {"c": "생리", "t": "s", "q": "과호흡을 하면 혈중 산소포화도는?", "o": ["크게 오른다", "거의 변하지 않는다", "크게 떨어진다", "2배가 된다"], "a": [1], "e": "평소에도 96~99%. 가득 찬 컵에 물을 더 못 부어요. 과호흡은 CO2만 낮춰요."}, {"c": "생리", "t": "m", "q": "(모두 고르시오) 과호흡의 증상은?", "o": ["손발 저림", "입 주변 마비감", "입안의 쇠맛", "심박이 느려짐", "어지러움"], "a": [0, 1, 2, 4], "e": "증상: 들뜸, 손발 저림, 어지러움, 현기증, 입 주변 마비감, 쇠맛, 손 반마비. 심박은 오히려 빨라져요."}, {"c": "생리", "t": "s", "q": "과호흡이 위험한 가장 큰 이유는?", "o": ["산소가 너무 많아져서", "CO2 경고 신호 없이 블랙아웃이 올 수 있어서", "폐가 터질 수 있어서", "귀 이퀄라이징이 안 돼서"], "a": [1], "e": "CO2를 인위적으로 낮추면 경고 신호를 못 느낀 채 산소가 바닥날 수 있어요."}, {"c": "생리", "t": "s", "q": "호흡에 쓰이는 주요 근육은?", "o": ["복직근과 승모근", "횡격막과 늑간근", "대흉근과 광배근", "목 근육과 어깨 근육"], "a": [1], "e": "Diaphragm(횡격막)과 intercostal muscles(늑간근)."}, {"c": "생리", "t": "s", "q": "'수축(contractions)'의 의미로 맞는 것은?", "o": ["산소가 바닥났다는 신호", "쌓인 CO2를 내보내려는 호흡근의 불수의적 움직임", "블랙아웃 직전 신호", "즉시 다이빙을 멈춰야 하는 신호"], "a": [1], "e": "수축은 정보일 뿐, 시작됐다고 반드시 산소가 부족하다는 뜻은 아니에요. 싸우지 말고 이완해요."}, {"c": "생리", "t": "m", "q": "(모두 고르시오) 다이빙 시간을 '안전하게' 늘리는 방법은?", "o": ["CO2 내성 키우기", "이완 능력 향상", "과호흡으로 CO2 낮추기", "기술(자세·덕다이브·핀킥) 다듬기", "큰 숨을 여러 번 연속으로 쉬기"], "a": [0, 1, 3], "e": "CO2 내성, 이완, 기술. 과호흡과 연속 큰 숨은 위험하거나 효과 없어요."}, {"c": "호흡", "t": "s", "q": "프리다이빙 호흡 사이클의 순서는?", "o": ["풀 브레스 → 이완 → 숨 참기 → 리커버리", "이완 → 풀 브레스 → 숨 참기 → 리커버리", "이완 → 과호흡 → 숨 참기 → 리커버리", "리커버리 → 이완 → 풀 브레스 → 숨 참기"], "a": [1], "e": "Relaxation → One full breath → Breath hold → Recovery breathing."}, {"c": "호흡", "t": "s", "q": "원 풀 브레스(풀 브레스)를 할 때 올바른 순서는?", "o": ["가슴 먼저, 배 나중", "배(횡격막) 먼저, 가슴 나중", "어깨를 들어올리며 한 번에", "빠르게 여러 번"], "a": [1], "e": "2단계: 복식 → 흉식. 용량보다 이완이 우선이고 큰 숨은 한 번만."}, {"c": "호흡", "t": "s", "q": "다이빙 전 이완 단계에서 호흡은?", "o": ["깊고 빠르게 쉰다", "복식호흡으로, 깊이·속도를 일부러 바꾸지 않고 자연스럽게", "숨을 최대한 길게 내쉰다", "가슴으로만 쉰다"], "a": [1], "e": "자연스러운 복식호흡. 일부러 바꾸면 과호흡이 되기 쉬워요."}, {"c": "호흡", "t": "s", "q": "리커버리 호흡의 올바른 방법은?", "o": ["힘껏 다 내쉬고 천천히 들이마신다", "편하게 수동적으로 반쯤 내쉬고, 빠르고 꽉 들이마신다", "스노클로 천천히 숨 쉰다", "말을 하며 숨을 고른다"], "a": [1], "e": "수동적 반 호기 → 빠르고 강한 흡기('hope' 하듯) → 잠깐 머금기. 최소 3번 후 OK 사인."}, {"c": "호흡", "t": "s", "q": "다이빙 후 리커버리 호흡은 최소 몇 번?", "o": ["1번", "2번", "3번", "5번"], "a": [2], "e": "최소 3번, 필요하면 더. 그다음 OK 사인."}, {"c": "호흡", "t": "s", "q": "물속에서 숨(공기)을 내쉬는 것은?", "o": ["CO2를 빼서 편해지니 권장", "블랙아웃 신호로 여겨져 하지 않는다", "상승할 때만 해도 된다", "하강할 때 하면 좋다"], "a": [1], "e": "블랙아웃이면 공기를 붙잡고 있지 못해요. 그래서 공기가 새면 위험 신호."}, {"c": "이퀄", "t": "s", "q": "수심 10m의 절대 압력은?", "o": ["1 bar", "2 bar", "3 bar", "10 bar"], "a": [1], "e": "수면 1bar + 10m마다 1bar. 10m=2bar, 20m=3bar."}, {"c": "이퀄", "t": "t", "q": "(주관식) 보일의 법칙을 한 줄로 쓰시오.", "a": "온도가 일정할 때 기체의 부피는 절대압력에 반비례한다.", "e": "그래서 10m(2bar)에서 공기 공간 부피는 절반이 돼요."}, {"c": "이퀄", "t": "t", "q": "(주관식) 이퀄라이징(equalization)이란?", "a": "하강하며 수압에 눌리는 공기 공간(귀·부비동·마스크)에 공기를 넣어 압력 균형을 맞추는 것.", "e": "폐는 따로 이퀄라이징하지 않고 이완해서 줄어들게 둬요."}, {"c": "이퀄", "t": "s", "q": "발살바(Valsalva)가 이보다 깊은 다이빙에는 권장되지 않는다고 교재가 말하는 수심은?", "o": ["3~5m", "8~10m", "15~20m", "30m"], "a": [1], "e": "발살바는 배·가슴 힘을 써서 깊은 다이빙에 비효율. 8~10m보다 깊은 곳엔 안전하고 쓸 만한 방법으로 권장되지 않아요."}, {"c": "이퀄", "t": "s", "q": "프렌젤(Frenzel)은 무엇으로 압력을 만드나?", "o": ["배와 가슴 근육", "혀(피스톤처럼)", "침 삼키기", "턱 움직이기"], "a": [1], "e": "성문을 닫고 혀를 피스톤처럼. 배가 말랑하면 프렌젤. '맥가이버 칼'."}, {"c": "이퀄", "t": "m", "q": "(모두 고르시오) 이퀄라이징을 돕는 방법은?", "o": ["바깥귀에 물 채우기", "세게 한 번에 하기", "하강 속도 줄이기·멈추기", "처방 없이 코막힘약 먹기", "다이빙 전 스트레칭", "살살, 자주 하기"], "a": [0, 2, 4, 5], "e": "힘으로 하면 부상. 충혈제거제는 처방 없이 먹지 않아요."}, {"c": "이퀄", "t": "s", "q": "이퀄라이징은 언제 해야 하나?", "o": ["귀가 아프기 시작할 때", "압력이 살짝 느껴질 때 바로(그 전에도)", "5m마다 한 번", "바닥에 도착해서"], "a": [1], "e": "아플 때까지 가면 이미 고막이 많이 늘어난 것. 미리, 살살, 자주."}, {"c": "이퀄", "t": "m", "q": "(모두 고르시오) 다이빙 전 피하면 좋은 음식은?", "o": ["유제품", "술", "카페인", "너무 맵거나 기름진 음식", "물"], "a": [0, 1, 2, 3], "e": "염증·점액을 늘리고 호흡기를 건조하게 해요. 설탕도 피해요. 물은 충분히!"}, {"c": "기술", "t": "s", "q": "덕다이브 전에 수면에서 미리 이퀄라이징하는 이유는?", "o": ["습관이라서", "덕다이브만으로 머리가 약 5m까지 내려가기 때문", "마스크를 고정하려고", "부력을 줄이려고"], "a": [1], "e": "덕다이브 중엔 손이 바빠서 이퀄이 어려워요. 그래서 pre-equalize."}, {"c": "기술", "t": "s", "q": "덕다이브 준비 순서로 맞는 것은?", "o": ["이완 → 풀 브레스 → 스노클 빼기 → 미리 이퀄 → 덕다이브", "풀 브레스 → 이완 → 덕다이브 → 스노클 빼기", "이완 → 스노클 문 채로 덕다이브", "미리 이퀄 → 과호흡 → 덕다이브"], "a": [0], "e": "스노클은 하강 전에 반드시 입에서 빼요."}, {"c": "기술", "t": "m", "q": "(모두 고르시오) 하강할 때 집중할 3가지는?", "o": ["유선형(streamlining)", "이퀄라이징", "이완", "빠른 속도", "위를 보며 방향 확인"], "a": [0, 1, 2], "e": "Streamlining, equalization, relaxation. 프리다이버는 가는 방향을 보지 않아요."}, {"c": "기술", "t": "s", "q": "핀킥의 올바른 시작점은?", "o": ["무릎", "발목", "엉덩이(고관절)", "허리"], "a": [2], "e": "무릎으로 차는 '자전거 킥'은 흔한 실수. 다리는 쭉 펴요. 힘·유연성은 다이내믹으로."}, {"c": "기술", "t": "s", "q": "바닥에서 '앞으로 구르는 턴'을 하는 이유는?", "o": ["빠르게 돌려고", "깊은 곳에서 폐를 보호하려고(등 젖힘 방지)", "멋있어서", "줄을 놓치지 않으려고"], "a": [1], "e": "등이나 가슴을 젖히는 턴은 깊은 곳에서 부상 위험."}, {"c": "기술", "t": "s", "q": "일찍 턴했는데 올라가다 귀가 '뻥' 뚫렸다. 어떻게 하나?", "o": ["다시 내려가 목표 수심을 찍는다", "그대로 수면까지 올라간다", "잠시 멈춰서 결정한다", "버디에게 신호하고 다시 내려간다"], "a": [1], "e": "상승을 시작하면 끝까지. 다시 내려가면 집중력·에너지 낭비, 버디 혼란, 부상 위험."}, {"c": "기술", "t": "s", "q": "'엄지 위로(thumbs up)' 손짓의 뜻은?", "o": ["괜찮다", "올라가자(수면으로)", "더 내려가자", "도와달라"], "a": [1], "e": "괜찮다는 OK 사인(엄지·검지 원 + 세 손가락 펴기). thumbs up은 올라가자."}, {"c": "기술", "t": "s", "q": "깊어질수록 몸이 무거워지는 이유는?", "o": ["피곤해서", "수압으로 몸과 슈트가 눌려 부력이 줄어서", "산소가 줄어서", "물이 차가워서"], "a": [1], "e": "아르키메데스 원리. 밀어내는 물의 부피가 줄면 부력이 줄어요. 올라오면 다시 가벼워져요."}, {"c": "안전", "t": "s", "q": "블랙아웃이 가장 자주 일어나는 때는?", "o": ["하강 시작", "바닥 턴", "상승 막바지 또는 수면에 올라온 직후", "수면 휴식 중"], "a": [2], "e": "그래서 다이빙이 끝나는 순간이 가장 위험하고, 버디는 끝까지 지켜봐요."}, {"c": "안전", "t": "t", "q": "(주관식) LMC(Loss of Motor Control)란?", "a": "산소가 너무 낮아져 생기는 저산소 증상. 주로 수면 복귀 후 눈·머리·손이 떨리는 경련('삼바'). 의식은 있으나 심하면 기도를 물 밖에 못 둔다.", "e": "블랙아웃보다 가벼운 단계. 블랙아웃으로 이어질 수 있어요."}, {"c": "안전", "t": "t", "q": "(주관식) 블랙아웃(BO)이란? 왜 위험한가?", "a": "산소 부족으로 의식을 잃는 것. 숨 참기 막바지나 올라온 직후에 생기고, 물속이면 익사 위험, 반복하면 뇌 손상 위험이 있다.", "e": "어디서든 생길 수 있어 항상 버디가 필요해요."}, {"c": "안전", "t": "m", "q": "(모두 고르시오) 블랙아웃 전조 증상은?", "o": ["귀울림", "따뜻한 느낌", "다이빙이 갑자기 쉬워짐", "터널 시야", "강한 호흡근 수축"], "a": [0, 1, 2, 3], "e": "그 외 생각이 흐려짐, 개미가 기는 듯한 저림. 수축은 CO2 신호예요. 그리고 이 전조를 믿고 다이빙하면 안 돼요."}, {"c": "안전", "t": "t", "q": "(주관식) SAFE 원칙의 S, A, FE는 각각?", "a": "S = Surface(수면으로 올린다), A = Airways(기도를 물 밖에 유지), FE = Facial Equipment(마스크·고글·노즈클립 제거)", "e": "그다음 BTT(Blow-Tap-Talk)."}, {"c": "안전", "t": "t", "q": "(주관식) BTT는 무엇의 약자이고 최대 몇 초?", "a": "Blow(눈·코 주변에 세게 불기) - Tap(뺨 가볍게 두드리기) - Talk(이름 부르며 숨 쉬라고 말하기). 최대 10~15초.", "e": "가장 효과적인 건 Blow. 그래서 얼굴 장비를 먼저 벗겨요."}, {"c": "안전", "t": "s", "q": "BTT로 깨지 않으면 다음 단계는?", "o": ["계속 BTT", "입-코 구조호흡 최대 5회", "바로 육지로 이동", "물을 뿌린다"], "a": [1], "e": "BTT 10~15초 → 입-코(mouth-to-nose) 구조호흡 최대 5회. 물속 블랙아웃이면 수면 도착 즉시 2회."}, {"c": "안전", "t": "s", "q": "BTT+구조호흡 최대 몇 초 안에 회복 안 되면 CPR·응급연락?", "o": ["10초", "30초", "1분", "3분"], "a": [1], "e": "30초 안에 안 되면 도움 요청, CPR, 응급구조 연락."}, {"c": "안전", "t": "s", "q": "블랙아웃 구조 시 다이버에게 접근하는 방향은?", "o": ["앞에서", "뒤에서", "옆에서", "아래에서"], "a": [1], "e": "뒤에서 접근해 샌드위치 자세로 코·입을 막고 머리를 받쳐 올려요. 깊으면 둘 다 웨이트벨트를 풀어요."}, {"c": "안전", "t": "s", "q": "LMC나 블랙아웃을 겪은 뒤에는?", "o": ["10분 쉬고 다시", "그날 다이빙은 끝, 24시간 정도 쉬고 원인 찾기", "얕게만 다이빙", "바로 다시 시도해 극복"], "a": [1], "e": "원인(과호흡, 스트레스, 컨디션, 기술)을 강사와 분석해요."}, {"c": "안전", "t": "m", "q": "(모두 고르시오) 버디가 위험하다는 신호는?", "o": ["마지막에 갑자기 빨라짐", "공기가 샘", "초점 없는 눈", "침착하고 일정한 핀킥", "불안하게 줄을 잡음", "수면에서 기도를 물 밖에 못 둠"], "a": [0, 1, 2, 4, 5], "e": "경험 많은 다이버는 막판에 오히려 천천히 침착해져요."}, {"c": "안전", "t": "s", "q": "세이프티 버디가 다이버를 만났을 때 위치는?", "o": ["뒤쪽 1m 위", "정면, 약 1m 아래", "옆에 나란히", "바로 위"], "a": [1], "e": "정면에서 눈을 보며 바로 개입할 수 있는 위치."}, {"c": "안전", "t": "s", "q": "뎁스 버디가 다이버와 함께 올라와야 하는 구간은 최소?", "o": ["마지막 5m", "마지막 10m", "전체 구간", "수면에서만"], "a": [1], "e": "30m보다 깊으면 목표 수심의 1/3(AIDA4 내용)."}, {"c": "안전", "t": "s", "q": "스태틱 버디 체크 3단계 순서는?", "o": ["응답 → 요청 → 확인", "요청(버디) → 응답(다이버) → 확인(버디)", "확인 → 요청 → 응답", "요청 → 확인 → 응답"], "a": [1], "e": "예: 어깨 꾹 → 검지 펴기 → 어깨 두 번 꾹. OK 사인은 힘 빠진 손과 헷갈려서 체크 응답으론 비추천."}, {"c": "안전", "t": "s", "q": "원 업 원 다운(one up, one down)이란?", "o": ["둘이 같이 내려간다", "한 명이 내려가면 한 명은 수면에서 지켜본다", "한 번 올라오면 한 번 쉰다", "1분 다이빙, 1분 휴식"], "a": [1], "e": "다이빙은 한 명씩, 나머지는 안전에 집중."}, {"c": "안전", "t": "m", "q": "(모두 고르시오) LMC·블랙아웃 위험을 줄이는 방법은?", "o": ["충분한 수분 섭취", "하강 전 스노클 빼기", "올바른 웨이트", "부이 사용", "매번 한계까지 도전", "매번 리커버리 호흡"], "a": [0, 1, 2, 3, 5], "e": "그 외: 버디, 이완, 좋은 기술, 구조 연습, 천천히 늘리기. 한계 도전은 금물."}, {"c": "안전", "t": "s", "q": "올바른 웨이트의 간단한 기준은?", "o": ["수면에서 바로 가라앉아야 한다", "수면에서 숨을 다 내쉬어도 가라앉지 않는다", "10m에서 가라앉기 시작", "무거울수록 좋다"], "a": [1], "e": "머리가 살짝 잠겨도 더 내려가면 안 돼요. 마지막 10m는 양성부력."}, {"c": "안전", "t": "s", "q": "AIDA2 자격으로 권장되는 최대 수심은?", "o": ["10m", "12m", "20m", "30m"], "a": [2], "e": "AIDA는 자격 수심(AIDA2는 20m)을 넘어 다이빙하지 말라고 권해요. 깊이·시간은 아주 천천히 늘려요."}, {"c": "안전", "t": "s", "q": "1분 다이빙 후 최소 수면 휴식은?", "o": ["1분", "2분", "3분", "5분"], "a": [2], "e": "직전 다이빙 시간의 최소 3배. 버디하러 내려갈 때도 적용."}, {"c": "안전", "t": "s", "q": "스쿠버 1회 후 프리다이빙까지 최소 대기 시간은?", "o": ["6시간", "12시간", "24시간", "48시간"], "a": [1], "e": "1회 12시간, 여러 번·감압다이빙 24시간, 프리다이빙 후 스쿠버 12시간. No-fly 표시가 꺼질 때까지."}, {"c": "안전", "t": "s", "q": "깊은 곳에서 스쿠버 다이버가 레귤레이터를 건네면?", "o": ["감사히 받는다", "절대 받지 않는다", "얕은 곳에서만 받는다", "버디 허락 시 받는다"], "a": [1], "e": "폐 과팽창 위험. 'No, thanks!'"}, {"c": "안전", "t": "s", "q": "줄 연습 때 랜야드가 '특히' 강력 권장되는 경우는?", "o": ["수면 스노클링할 때", "20m보다 깊거나 시야가 10m 미만일 때", "수영장에서", "스태틱할 때"], "a": [1], "e": "줄 연습 땐 항상 강력 권장, 특히 20m보다 깊거나 시야 10m 미만일 때. 버디 시야 밖에서 다이빙할 때도 사용."}, {"c": "장비", "t": "m", "q": "(모두 고르시오) 프리다이빙 마스크의 특징은?", "o": ["코가 덮여 있음", "내부 용적이 작음", "얼굴에 딱 맞음", "부드러운 스커트", "내부 용적이 큼"], "a": [0, 1, 2, 3], "e": "+ 투명한 렌즈. 용적이 작아야 이퀄라이징할 공기가 적게 들어요."}, {"c": "장비", "t": "s", "q": "초보에게 맞는 바이핀은?", "o": ["긴 카본 핀", "짧은 핀", "모노핀", "핀 없이"], "a": [1], "e": "짧은 핀으로 기술부터. 기술·근력·유연성이 생기면 긴 핀."}, {"c": "장비", "t": "s", "q": "웨이트벨트는 어디에 차나?", "o": ["허리", "골반(엉덩이)", "가슴", "발목"], "a": [1], "e": "복식호흡·덕다이브를 방해하지 않게 골반에. 비상시 쉽게 풀 수 있게."}, {"c": "장비", "t": "s", "q": "스노클이 유용한 때는?", "o": ["하강할 때", "수면에서 쉬거나 버디를 지켜볼 때", "리커버리 호흡할 때", "바닥에서"], "a": [1], "e": "리커버리 호흡은 스노클 없이 입으로. 하강 전엔 빼요."}, {"c": "종목", "t": "s", "q": "스태틱(STA)의 정의는?", "o": ["수평으로 잠영", "수면에 엎드려 가만히 숨 참기", "줄 잡고 내려가기", "핀 없이 수직 다이빙"], "a": [1], "e": "시간으로 측정하는 유일한 종목."}, {"c": "종목", "t": "s", "q": "뎁스 세션을 시작할 때 가장 흔한 종목은?", "o": ["CWT", "FIM(프리 이머전)", "DYN", "STA"], "a": [1], "e": "줄을 당겨 천천히, 힘을 거의 안 쓰고 몸·마음을 '프리다이빙 모드'로."}, {"c": "종목", "t": "s", "q": "DYNB에서 B의 뜻은?", "o": ["Breath", "Bifins(바이핀)", "Buddy", "Bottom"], "a": [1], "e": "DYN=모노핀, DYNB=바이핀, DNF=노핀."}, {"c": "종목", "t": "s", "q": "다이내믹 훈련이 중요한 이유로 가장 알맞은 것은?", "o": ["깊이 적응", "자세·핀킥·CO2 내성 훈련, 바다가 멀거나 겨울에도 가능", "이퀄라이징 연습", "스노클 연습"], "a": [1], "e": "핀킥 근력·유연성도 다이내믹으로 키워요."}, {"c": "장비", "t": "m", "q": "(모두 고르시오) 프리다이빙 웨이트벨트로 알맞은 것은?", "o": ["실리콘·고무처럼 신축성 있는 재질", "큰 추 몇 개", "작은 추 여러 개", "한 손으로 풀리는 퀵릴리즈 버클", "허리 위쪽에 착용"], "a": [0, 2, 3], "e": "작은 추 여러 개가 미세 조절과 균형에 좋고, 골반에 차요."}, {"c": "장비", "t": "s", "q": "랜야드에 꼭 필요한 기능은?", "o": ["방수 시계", "퀵릴리즈(바로 풀림)", "자석", "조명"], "a": [1], "e": "엉키면 즉시 풀 수 있어야 해요."}, {"c": "종목", "t": "s", "q": "컨스턴트 웨이트 종목에서 바닥 턴 때 줄은?", "o": ["마음대로 당겨도 된다", "한 번만 당길 수 있다", "절대 만지면 안 된다", "세 번까지 당길 수 있다"], "a": [1], "e": "추진력 없이 만지는 건 괜찮지만 당기는 건 턴할 때 한 번만."}, {"c": "종목", "t": "s", "q": "AIDA가 안전 문제로 완전히 폐지한 종목은?", "o": ["VWT", "NLT(노 리밋)", "FIM", "CNF"], "a": [1], "e": "VWT는 대회는 없지만 개인 기록은 인정. NLT는 폐지."}, {"c": "환경", "t": "m", "q": "(모두 고르시오) 해양생물을 대하는 올바른 태도는?", "o": ["쫓지 않는다", "먹이를 주지 않는다", "만지지 않는다", "조개껍데기는 기념으로 가져온다", "바닥 모래를 일으키지 않는다"], "a": [0, 1, 2, 4], "e": "Take nothing, leave nothing. 빈 껍데기도 소라게 등이 다시 써요."}, {"c": "환경", "t": "s", "q": "바다가 만드는 산소는 우리가 마시는 산소의 약 몇 %?", "o": ["10%", "30%", "50%", "70%"], "a": [3], "e": "바다는 지구 표면 71%, 물 97%, 산소 70%, CO2 배출 1/3 흡수."}, {"c": "환경", "t": "s", "q": "바다에서 쓰기에 가장 알맞은 자외선 차단 방법은?", "o": ["일반 화학 선크림", "스프레이 선크림", "래시가드 같은 보호복 또는 논나노 산화아연 제품", "태닝 오일"], "a": [2], "e": "화학 선크림은 산호에 해로워요."}, {"c": "환경", "t": "m", "q": "(모두 고르시오) AIDA 프리다이버 행동규범에 포함되는 것은?", "o": ["환경 존중", "바다에서 아무것도 가져오지 않기", "바다에 아무것도 남기지 않기", "기록을 위해 한계에 도전하기", "안전하게 다이빙하고 모범이 되기"], "a": [0, 1, 2, 4], "e": "+ 해양생물 존중, 자신을 존중하고 책임감 있게."}, {"c": "호흡", "t": "s", "q": "(O/X) 리커버리 호흡은 힘껏 다 내쉰 뒤 천천히 들이마시는 방식이다.", "o": ["맞음", "틀림"], "a": [1], "e": "편하게 수동적으로 반쯤 내쉬고, 빠르고 꽉 들이마셔요. 최소 3번."}, {"c": "이퀄", "t": "s", "q": "(O/X) 후드와 고막 사이(바깥귀)에 공기가 갇혀 있으면 이퀄라이징이 어렵거나 부상을 입을 수 있다.", "o": ["맞음", "틀림"], "a": [0], "e": "그래서 하강 전에 후드 안으로 물을 채워요."}, {"c": "이퀄", "t": "s", "q": "(O/X) 상승할 때도 귀와 부비동을 따로 이퀄라이징해야 한다.", "o": ["맞음", "틀림"], "a": [1], "e": "상승할 땐 공기가 팽창해 저절로 빠져나가서 보통 따로 할 필요가 없어요."}, {"c": "이퀄", "t": "s", "q": "(O/X) 폐는 하강할 때 적극적으로 이퀄라이징해야 하는 공기 공간이다.", "o": ["맞음", "틀림"], "a": [1], "e": "폐는 가슴·배를 이완해서 줄어들게 두면 돼요."}, {"c": "안전", "t": "s", "q": "(O/X) 블랙아웃 전조 증상은 CO2 신호보다 먼저, 뚜렷하게 나타난다.", "o": ["맞음", "틀림"], "a": [1], "e": "저산소 전조는 CO2 신호보다 훨씬 늦고 알아채기 어려워요. 한계에 아주 가까울 때 나타나요."}, {"c": "안전", "t": "s", "q": "(O/X) LMC를 겪었다면 충분히 쉰 뒤 같은 날 다시 다이빙해도 된다.", "o": ["맞음", "틀림"], "a": [1], "e": "LMC·블랙아웃 뒤에는 그날 다이빙을 끝내고(예: 24시간) 원인을 찾아요."}, {"c": "안전", "t": "s", "q": "(O/X) 수면에서 숨을 다 내쉬었을 때 가라앉지 않는 정도가 과도한 웨이트를 피하는 간단한 기준이다.", "o": ["맞음", "틀림"], "a": [0], "e": "머리가 살짝 잠겨도 더 내려가면 안 돼요. 세션 전에 이 'exhale check'를 해요."}, {"c": "기술", "t": "s", "q": "(O/X) 핀킥은 무릎에서 시작해야 힘이 잘 전달된다.", "o": ["맞음", "틀림"], "a": [1], "e": "엉덩이(고관절)에서 시작해요. 무릎으로 차는 '자전거 킥'은 흔한 실수예요."}, {"c": "이퀄", "t": "s", "q": "(O/X) 다이빙 전에 유제품·카페인·술을 피하면 이퀄라이징에 도움이 된다.", "o": ["맞음", "틀림"], "a": [0], "e": "염증·점액을 늘리고 호흡기를 건조하게 하는 음식이에요. 너무 기름지거나 매운 음식, 설탕도 피해요."}, {"c": "안전", "t": "s", "q": "(O/X) 깊은 곳에서 스쿠버 다이버가 레귤레이터를 건네면 받아도 된다.", "o": ["맞음", "틀림"], "a": [1], "e": "폐 과팽창 위험 때문에 절대 받지 않아요. 'No, thanks!'"}, {"c": "생리", "t": "s", "q": "(O/X) 과호흡을 하면 혈중 산소가 크게 늘어 안전하게 오래 참을 수 있다.", "o": ["맞음", "틀림"], "a": [1], "e": "산소는 거의 그대로이고 CO2만 낮아져서 경고 없이 블랙아웃이 올 수 있어요."}, {"c": "호흡", "t": "s", "q": "(O/X) 원 풀 브레스는 배(횡격막)로 먼저 채우고 그다음 가슴으로 채운다.", "o": ["맞음", "틀림"], "a": [0], "e": "2단계 호흡. 용량보다 이완이 우선이에요."}, {"c": "안전", "t": "s", "q": "(O/X) 스태틱 버디는 다이버가 숨 참기를 끝내고 회복할 때까지 가까이서 지켜봐야 한다.", "o": ["맞음", "틀림"], "a": [0], "e": "다이빙이 끝나는 순간(exit)이 가장 위험해요."}, {"c": "안전", "t": "s", "q": "(O/X) 수면 휴식 시간은 직전 다이빙 시간의 2배면 충분하다.", "o": ["맞음", "틀림"], "a": [1], "e": "AIDA2 수준(30m보다 얕은 다이빙)에서는 최소 3배예요."}, {"c": "생리", "t": "s", "q": "(O/X) 수축(contraction)이 시작되면 산소가 바닥났으니 즉시 숨을 쉬어야 한다.", "o": ["맞음", "틀림"], "a": [1], "e": "수축은 CO2를 내보내려는 신호이고, 반드시 산소 부족을 뜻하지는 않아요."}, {"c": "기술", "t": "s", "q": "(O/X) 한 번 상승을 시작하면, 귀가 뚫렸더라도 다시 내려가지 않고 수면까지 올라간다.", "o": ["맞음", "틀림"], "a": [0], "e": "다시 내려가면 집중력·에너지 낭비, 버디 혼란, 부상 위험이 생겨요."}, {"c": "종목", "t": "match", "q": "(짝 맞추기) 종목 약자와 설명을 맞게 연결하세요.", "pairs": [["STA", "수면에 엎드려 가만히 숨 참기"], ["DYNB", "바이핀으로 수평 거리 잠영"], ["FIM", "줄을 당겨 내려가고 올라오기"], ["CWT", "모노핀으로 수직 다이빙"], ["CNF", "핀 없이 수직 다이빙"]], "e": "DYN=모노핀, DYNB=바이핀, DNF=핀 없이 수평. CWT=모노핀, CWTB=바이핀, CNF=핀 없이 수직."}, {"c": "안전", "t": "match", "q": "(짝 맞추기) 상황과 알맞은 대처를 연결하세요.", "pairs": [["버디가 LMC(떨림)", "기도를 물 밖으로 받치고 리커버리 호흡 유도"], ["물속에서 블랙아웃", "SAFE 후 수면 도착 즉시 구조호흡 2회"], ["BTT 10~15초에도 반응 없음", "입-코 구조호흡 최대 5회"], ["30초 안에 회복 안 됨", "도움 요청·CPR·응급 연락"], ["과호흡 증상(저림·어지러움)", "다이빙 중단, 다시 이완 호흡"]], "e": "교재 7.9 구조 절차와 3.5 과호흡 증상 대처예요."}, {"c": "이퀄", "t": "match", "q": "(짝 맞추기) 이퀄라이징 방법과 특징을 연결하세요.", "pairs": [["발살바", "코 막고 배·가슴 힘으로 밀기, 8~10m보다 깊으면 비권장"], ["프렌젤", "성문 닫고 혀를 피스톤처럼, 프리다이빙의 맥가이버 칼"], ["핸즈프리(BTV/VTO)", "코를 안 잡고 이관 근육으로 열기"], ["마스크 이퀄", "코로 살짝 공기를 넣어 마스크 눌림 막기"]], "e": "교재 5.3~5.4."}];
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===b.dataset.t));scrollTo(0,0)});
+// ===== 모의고사 (화면 전환형) =====
+(function(){
+const KEY='aida2quiz_v2';
+let ST={}; try{ST=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(ST))}catch(e){}};
+const rec=i=>ST[i]||(ST[i]={seen:0,ok:0,wrong:0,last:null});
+const CATS=[...new Set(Q.map(q=>q.c))];
+const L='abcdef';
+const root=document.getElementById('qz');
+let opt={mode:'exam',n:10,cat:'all'};
+let S=null; // session
+
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const strip=q=>q.replace(/^\([^)]*\)\s*/,'');
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const tagHtml=q=>q.t==='m'?'<span class="qtag m">모두 고르시오</span>':q.t==='t'?'<span class="qtag t">주관식</span>':q.t==='match'?'<span class="qtag mt">짝 맞추기</span>':/^\(O\/X\)/.test(q.q)?'<span class="qtag ox">O/X</span>':'<span class="qtag">객관식</span>';
+
+function stats(){
+  const ids=Q.map((_,i)=>i); const seen=ids.filter(i=>ST[i]&&ST[i].seen);
+  const wrongNow=ids.filter(i=>ST[i]&&ST[i].last===false);
+  const okNow=ids.filter(i=>ST[i]&&ST[i].last===true);
+  return {total:Q.length,seen:seen.length,wrong:wrongNow.length,acc:seen.length?Math.round(okNow.length/seen.length*100):0};
+}
+function pick(n,cat,onlyWrong){
+  let pool=Q.map((_,i)=>i).filter(i=>cat==='all'||Q[i].c===cat);
+  if(onlyWrong) pool=pool.filter(i=>ST[i]&&ST[i].last===false);
+  // 안 푼 문제 → 틀린 문제 → 맞힌 문제 순으로 우선
+  const g0=shuf(pool.filter(i=>!(ST[i]&&ST[i].seen))), g1=shuf(pool.filter(i=>ST[i]&&ST[i].last===false)), g2=shuf(pool.filter(i=>ST[i]&&ST[i].last===true));
+  const ordered=onlyWrong?shuf(pool):g0.concat(g1,g2);
+  return n? ordered.slice(0,n) : ordered;
+}
+
+function home(){
+  const s=stats();
+  const catBtns=['all'].concat(CATS).map(c=>`<button class="chip ${opt.cat===c?'on':''}" data-cat="${c}">${c==='all'?'전체':c}</button>`).join('');
+  root.innerHTML=`
+  <div class="card qhome">
+    <h2>모의고사</h2>
+    <div class="stat3">
+      <div><b>${s.seen}</b><span>/${s.total} 풀어봄</span></div>
+      <div><b>${s.acc}%</b><span>정답률</span></div>
+      <div><b>${s.wrong}</b><span>오답노트</span></div>
+    </div>
+    <div class="pbar"><i style="width:${Math.round(s.seen/s.total*100)}%"></i></div>
+    <p class="hint">안 푼 문제부터 먼저 나와요. 같은 문제만 반복되지 않아요.</p><p class="hint">실제 시험: 33문제 · 90분 · 한 화면에 한 문제 · O/X, 모두 고르시오, 빈칸, 짝 맞추기 섞여 나와요. 합격선 75%.</p>
+  </div>
+  <div class="card">
+    <div class="lbl">방식</div>
+    <div class="seg" id="segMode">
+      <button data-v="exam" class="${opt.mode==='exam'?'on':''}"><b>실전</b><small>끝나고 한 번에 채점</small></button>
+      <button data-v="practice" class="${opt.mode==='practice'?'on':''}"><b>연습</b><small>문제마다 바로 해설</small></button>
+    </div>
+    <div class="lbl">문항 수</div>
+    <div class="seg" id="segN">
+      ${[10,20,0].map(v=>`<button data-v="${v}" class="${opt.n===v?'on':''}"><b>${v||'전체'}</b><small>${v?v+'문제':Q.length+'문제'}</small></button>`).join('')}
+    </div>
+    <div class="lbl">범위</div>
+    <div class="chips">${catBtns}</div>
+  </div>
+  <div class="actbar">
+    <button class="big ghost" id="goWrong" ${s.wrong?'':'disabled'}>오답만 다시 (${s.wrong})</button>
+    <button class="big" id="goStart">시작하기</button>
+  </div>
+  <p class="reset"><a href="#" id="resetRec">기록 초기화</a></p>`;
+  root.querySelectorAll('#segMode button').forEach(b=>b.onclick=()=>{opt.mode=b.dataset.v;home()});
+  root.querySelectorAll('#segN button').forEach(b=>b.onclick=()=>{opt.n=+b.dataset.v;home()});
+  root.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{opt.cat=b.dataset.cat;home()});
+  document.getElementById('goStart').onclick=()=>start(pick(opt.n,opt.cat,false));
+  document.getElementById('goWrong').onclick=()=>start(pick(0,'all',true));
+  document.getElementById('resetRec').onclick=e=>{e.preventDefault(); if(confirm('푼 기록과 오답노트를 지울까요?')){ST={};save();home();}};
+}
+
+function start(ids){
+  if(!ids.length){alert('해당 범위에 문제가 없어요');return}
+  S={ids,i:0,ans:ids.map(()=>null),done:ids.map(()=>false),mode:opt.mode,mo:ids.map(qi=>Q[qi].t==='match'?shuf(Q[qi].pairs.map(p=>p[1])):null)};
+  renderQ(); scrollTo(0,0);
+}
+function isRight(q,a){
+  if(q.t==='t') return a&&a.self===true;
+  if(q.t==='match') return !!(a&&a.match&&q.pairs.every((p,i)=>a.match[i]===p[1]));
+  if(!a||!a.pick||!a.pick.length) return false;
+  return a.pick.length===q.a.length && a.pick.every(p=>q.a.includes(p));
+}
+function renderQ(){
+  const k=S.i, qi=S.ids[k], q=Q[qi], a=S.ans[k]||{pick:[],text:'',self:null}, shown=S.done[k];
+  const pct=Math.round((k)/S.ids.length*100);
+  let body='';
+  if(q.t==='match'){
+    const mo=S.mo[k]; const mm=(a.match)||[];
+    body='<div class="hint">왼쪽 항목마다 알맞은 것을 고르세요</div>'+q.pairs.map((p,i)=>{
+      let cls='mrow'; if(shown) cls+= (mm[i]===p[1]?' right':' wrong');
+      return `<div class="${cls}"><div class="ml">${esc(p[0])}</div><select data-i="${i}" ${shown?'disabled':''}><option value="">선택하세요</option>${mo.map(o=>`<option ${mm[i]===o?'selected':''}>${esc(o)}</option>`).join('')}</select>${shown&&mm[i]!==p[1]?`<div class="mfix">정답: ${esc(p[1])}</div>`:''}</div>`;}).join('');
+    if(shown){ const ok=isRight(q,a); body+=`<div class="fb ${ok?'okb':'nob'}"><div class="fbh">${ok?'모두 맞았어요':'틀린 칸이 있어요'}</div><div class="fbe">${esc(q.e)}</div></div>`; }
+  } else if(q.t==='t'){
+    body=`<textarea id="ta" placeholder="떠오르는 대로 적어보세요 (안 적어도 돼요)">${esc(a.text||'')}</textarea>`;
+    if(shown){ body+=`<div class="fb"><div class="fbh">모범답안</div>${esc(q.a)}<div class="fbe">${esc(q.e)}</div>
+      <div class="selfq">내 답이 맞았나요?</div><div class="seg2"><button data-s="1" class="${a.self===true?'on ok':''}">맞았어요</button><button data-s="0" class="${a.self===false?'on no':''}">틀렸어요</button></div></div>`; }
+  } else {
+    body=(q.t==='m'?'<div class="hint">해당하는 것을 모두 고르세요</div>':'')+q.o.map((o,j)=>{
+      const sel=a.pick&&a.pick.includes(j);
+      let cls='opt2'+(sel?' sel':'');
+      if(shown){ if(q.a.includes(j)) cls+=' right'; else if(sel) cls+=' wrong'; }
+      return `<button class="${cls}" data-j="${j}" ${shown?'disabled':''}><span class="ltr">${L[j]}</span><span>${esc(o)}</span>${q.t==='m'?'<span class="ck">'+(sel?'✓':'')+'</span>':''}</button>`;}).join('');
+    if(shown){ const ok=isRight(q,a); body+=`<div class="fb ${ok?'okb':'nob'}"><div class="fbh">${ok?'정답이에요':'아쉬워요'} · 정답 ${q.a.map(x=>L[x]).join(', ')}</div><div class="fbe">${esc(q.e)}</div></div>`; }
+  }
+  const last=k===S.ids.length-1;
+  let primary;
+  if(S.mode==='practice'){
+    if(!shown) primary=q.t==='t'?'정답 보기':'확인';
+    else primary=last?'결과 보기':'다음 문제';
+  } else {
+    if(q.t==='t' && !shown) primary='정답 보기';
+    else primary=last?'제출하고 채점':'다음';
+  }
+  root.innerHTML=`
+  <div class="qtop"><button class="xbtn" id="quit">✕ 그만두기</button><span class="qcnt">${k+1} / ${S.ids.length}</span></div>
+  <div class="pbar thin"><i style="width:${pct}%"></i></div>
+  <div class="card qcard">
+    <div class="qmeta">${tagHtml(q)}<span class="qcat">${esc(q.c)}</span></div>
+    <div class="qtext">${esc(strip(q.q))}</div>
+    ${body}
+  </div>
+  <div class="actbar">
+    <button class="big ghost" id="prev" ${k===0?'disabled':''}>이전</button>
+    <button class="big" id="next">${primary}</button>
+  </div>`;
+  const ta=document.getElementById('ta'); if(ta) ta.oninput=()=>{S.ans[k]=Object.assign(S.ans[k]||{},{text:ta.value})};
+  root.querySelectorAll('.mrow select').forEach(sel=>sel.onchange=()=>{const cur=S.ans[k]||{}; const mm=(cur.match||[]).slice(); mm[+sel.dataset.i]=sel.value||undefined; S.ans[k]=Object.assign(cur,{match:mm});});
+  root.querySelectorAll('.opt2').forEach(b=>b.onclick=()=>{
+    const j=+b.dataset.j; const cur=S.ans[k]||{pick:[]}; let p=cur.pick||[];
+    if(q.t==='m') p=p.includes(j)?p.filter(x=>x!==j):p.concat(j); else p=[j];
+    S.ans[k]=Object.assign(cur,{pick:p}); renderQ();
+  });
+  root.querySelectorAll('.seg2 button').forEach(b=>b.onclick=()=>{S.ans[k]=Object.assign(S.ans[k]||{},{self:b.dataset.s==='1'}); renderQ();});
+  document.getElementById('quit').onclick=()=>{ if(confirm('그만두고 처음 화면으로 갈까요? (지금까지 푼 건 기록돼요)')){commit(true);home();} };
+  document.getElementById('prev').onclick=()=>{S.i--;renderQ();scrollTo(0,0)};
+  document.getElementById('next').onclick=()=>{
+    const cur=S.ans[k];
+    if(q.t==='match'){ if(!cur||!cur.match||q.pairs.some((p,i)=>!cur.match[i])){ toast('모든 칸을 골라주세요'); return; } }
+    else if(q.t!=='t' && (!cur||!cur.pick||!cur.pick.length)){ toast('답을 골라주세요'); return; }
+    if(q.t==='t' && !shown){ S.done[k]=true; renderQ(); return; }
+    if(q.t==='t' && shown && (cur==null||cur.self==null)){ toast('맞았는지 골라주세요'); return; }
+    if(S.mode==='practice' && !shown){ S.done[k]=true; renderQ(); return; }
+    if(last){ commit(false); result(); scrollTo(0,0); return; }
+    S.i++; renderQ(); scrollTo(0,0);
+  };
+}
+function commit(partial){
+  S.ids.forEach((qi,k)=>{ const a=S.ans[k]; if(!a) return; const q=Q[qi];
+    if(q.t==='t' && a.self==null) return;
+    if(q.t==='match' && !(a.match&&a.match.length)) return;
+    if(q.t!=='t' && q.t!=='match' && (!a.pick||!a.pick.length)) return;
+    const r=rec(qi), ok=isRight(q,a); r.seen++; r.last=ok; if(ok) r.ok++; else r.wrong++; });
+  save();
+}
+function result(){
+  const n=S.ids.length; const okList=S.ids.map((qi,k)=>isRight(Q[qi],S.ans[k]));
+  const c=okList.filter(Boolean).length, pct=Math.round(c/n*100), pass=pct>=75;
+  const byCat={}; S.ids.forEach((qi,k)=>{const ct=Q[qi].c; byCat[ct]=byCat[ct]||{n:0,c:0}; byCat[ct].n++; if(okList[k]) byCat[ct].c++;});
+  const catRows=Object.entries(byCat).map(([ct,v])=>{const p=Math.round(v.c/v.n*100);return `<div class="crow"><span>${ct}</span><div class="pbar"><i class="${p>=75?'':'low'}" style="width:${p}%"></i></div><b>${v.c}/${v.n}</b></div>`}).join('');
+  const wrongs=S.ids.map((qi,k)=>({qi,k})).filter(x=>!okList[x.k]);
+  const wHtml=wrongs.map(({qi,k})=>{const q=Q[qi], a=S.ans[k]||{};
+    let mine,right;
+    if(q.t==='match'){ mine=q.pairs.map((p,i)=>esc(p[0])+' → '+esc((a.match||[])[i]||'(빈칸)')).join('<br>'); right=q.pairs.map(p=>esc(p[0])+' → '+esc(p[1])).join('<br>'); }
+    else { mine=q.t==='t'?(a.text?esc(a.text):'(빈칸)'):((a.pick||[]).map(x=>L[x]+') '+esc(q.o[x])).join(', ')||'(무응답)'); right=q.t==='t'?esc(q.a):q.a.map(x=>L[x]+') '+esc(q.o[x])).join(', '); }
+    return `<details class="wr"><summary>${esc(strip(q.q))}</summary><div class="wb"><div><span class="mine">내 답</span> ${mine}</div><div><span class="rt">정답</span> ${right}</div><div class="fbe">${esc(q.e)}</div></div></details>`}).join('');
+  root.innerHTML=`
+  <div class="card res ${pass?'pass':'fail'}">
+    <div class="ring" style="--p:${pct}"><span>${pct}<small>%</small></span></div>
+    <div class="rmsg">${pct>=90?'아주 좋아요! 실전도 문제없어요':pass?'합격선(75%) 통과! 틀린 것만 다시 보세요':'조금만 더! 틀린 문제를 복습해요'}</div>
+    <div class="rsub">${n}문제 중 ${c}개 정답 · 합격선 75%</div>
+  </div>
+  <div class="card"><div class="lbl">범위별 결과</div>${catRows}</div>
+  ${wrongs.length?`<div class="card"><div class="lbl">틀린 문제 ${wrongs.length}개 · 눌러서 해설 보기</div>${wHtml}</div>`:''}
+  <div class="actbar">
+    <button class="big ghost" id="again" ${wrongs.length?'':'disabled'}>틀린 것만 다시</button>
+    <button class="big" id="newset">새 모의고사</button>
+  </div>
+  <p class="reset"><a href="#" id="toHome">처음 화면으로</a></p>`;
+  document.getElementById('again').onclick=()=>start(shuf(wrongs.map(x=>x.qi)));
+  document.getElementById('newset').onclick=()=>start(pick(opt.n,opt.cat,false));
+  document.getElementById('toHome').onclick=e=>{e.preventDefault();home();scrollTo(0,0)};
+}
+let tt=null; function toast(m){let t=document.getElementById('toast'); if(!t){t=document.createElement('div');t.id='toast';document.body.appendChild(t)} t.textContent=m; t.className='show'; clearTimeout(tt); tt=setTimeout(()=>t.className='',1400);}
+home();
+})();
+
+let hits=[],hi=-1;const full=document.querySelector('.full');
+function clearMarks(){full.querySelectorAll('mark').forEach(m=>{m.replaceWith(document.createTextNode(m.textContent))});full.normalize();}
+function doSearch(){clearMarks();hits=[];hi=-1;const q=document.getElementById('sq').value.trim();if(!q){document.getElementById('scnt').textContent='';return}
+ const w=document.createTreeWalker(full,NodeFilter.SHOW_TEXT);const nodes=[];while(w.nextNode())nodes.push(w.currentNode);
+ const ql=q.toLowerCase();
+ nodes.forEach(n=>{const t=n.nodeValue;const tl=t.toLowerCase();let i=tl.indexOf(ql);if(i<0)return;const frag=document.createDocumentFragment();let last=0;
+  while(i>=0){frag.appendChild(document.createTextNode(t.slice(last,i)));const m=document.createElement('mark');m.textContent=t.slice(i,i+q.length);frag.appendChild(m);hits.push(m);last=i+q.length;i=tl.indexOf(ql,last)}
+  frag.appendChild(document.createTextNode(t.slice(last)));n.replaceWith(frag)});
+ document.getElementById('scnt').textContent=hits.length?hits.length+'건':'결과 없음';nextHit()}
+function nextHit(){if(!hits.length)return;if(hi>=0)hits[hi].classList.remove('cur');hi=(hi+1)%hits.length;hits[hi].classList.add('cur');hits[hi].scrollIntoView({block:'center'});document.getElementById('scnt').textContent=(hi+1)+'/'+hits.length+'건'}
+document.getElementById('sgo').onclick=doSearch;document.getElementById('snext').onclick=nextHit;document.getElementById('sq').onkeydown=e=>{if(e.key==='Enter')doSearch()};
+// flashcards from term table
+const rows=[...document.querySelectorAll('#word table tr')].slice(1).map(r=>[...r.children].map(td=>td.textContent));
+let fi=0,back=false;const fc=document.getElementById('fc');
+const show=()=>{fc.classList.toggle('back',back);fc.textContent=rows.length?(back?rows[fi][1]:rows[fi][0])+'  ('+(fi+1)+'/'+rows.length+')':''};
+fc.onclick=document.getElementById('fflip').onclick=()=>{back=!back;show()};
+document.getElementById('fnext').onclick=()=>{fi=(fi+1)%rows.length;back=false;show()};
+document.getElementById('fprev').onclick=()=>{fi=(fi-1+rows.length)%rows.length;back=false;show()};show();
+</script></body></html>
