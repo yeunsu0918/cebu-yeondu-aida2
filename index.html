@@ -207,6 +207,13 @@ nav{padding:0 max(0px,calc((100% - 760px)/2))}
 .inst figcaption span{font-weight:500;color:var(--mute)}
 @media (min-width:768px){.inst img{width:92px;height:92px}.inst figcaption{font-size:12px}}
 .hsub,header h1{word-break:keep-all}
+.steps{counter-reset:st;list-style:none;padding:0;margin:6px 0 0}
+.steps li{counter-increment:st;position:relative;padding:0 0 14px 40px;font-size:14.5px;line-height:1.6;color:#334155;word-break:keep-all}
+.steps li::before{content:counter(st);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--c);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:12px;top:30px;bottom:4px;width:2px;background:var(--line)}
+.steps li b:first-child{display:block;color:var(--d);font-size:15px;margin-bottom:2px}
+.steps a{color:var(--c)}
+.howto .note{font-size:13px;color:var(--mute);background:var(--bg);border-radius:10px;padding:10px 12px;margin:4px 0 0;line-height:1.55;word-break:keep-all}
 
 footer{font-size:12px;color:#888;text-align:center;padding:18px 12px 70px}
 </style></head><body>
@@ -214,7 +221,14 @@ footer{font-size:12px;color:#888;text-align:center;padding:18px 12px 70px}
 <nav><button data-t="key" class="on">핵심</button><button data-t="ch">요약</button><button data-t="num">숫자</button><button data-t="rev">복습</button><button data-t="word">용어</button><button data-t="quiz">모의고사</button></nav>
 <main>
 <section id="quiz"><div id="qz"></div></section>
-<section id="key" class="on"><div class="tip"><b>공부 순서</b> 핵심 → 요약(7장 안전 중점) → 숫자 → 복습 → 용어 → 모의고사</div><div class="card"><h2>꼭 외울 한 줄 10개</h2>
+<section id="key" class="on"><div class="tip"><b>공부 순서</b> 핵심 → 요약(7장 안전 중점) → 숫자 → 복습 → 용어 → 모의고사</div><div class="card howto"><h2>이론시험 신청 방법</h2><ol class="steps">
+<li><b>초대 메일로 AIDA 가입</b>쌤이 과정에 초대하면 "EOS Course Notification" 메일이 와요. 메일 링크나 <a href="https://eos.aidainternational.org/Register" target="_blank" rel="noopener">AIDA EOS 가입 페이지</a>에서 가입하고, 이어서 오는 "Confirm your AIDA account" 메일로 이메일 인증을 해요.</li>
+<li><b>프로필 채우기</b>영문 이름은 <b>여권과 똑같이</b> 써요(자격증에 그대로 찍혀요). 주소, 전화번호, 비상연락처를 넣고 쌤 과정 초대 수락에 체크해요. 증명사진은 나중에 올려도 돼요.</li>
+<li><b>쌤한테 가입 완료 알리기</b>카톡으로 "가입했어요, 이론시험 링크 부탁드려요"라고 보내면 "Online Exam Invitation - AIDA2" 메일이 와요.</li>
+<li><b>시험 언어 고르기</b>메일 링크를 누르고 시험 화면에서 언어를 <b>Korean</b>으로 고르면 시험 링크가 나와요. 같은 링크가 메일로도 한 통 더 와요.</li>
+<li><b>응시</b>"평가 동의서"에 동의하면 바로 시작돼요. 33문제, 90분, 75% 이상이면 합격이에요. 교재를 보지 않고 혼자 푸는 시험이에요.</li>
+<li><b>끝나면 쌤한테 알리기</b>점수는 바로 나오고 "리뷰 결과"에서 틀린 문제를 볼 수 있어요. 자동으로 안 갈 수도 있으니 쌤한테 직접 알려주세요.</li>
+</ol><p class="note">면책동의서와 건강확인서는 쌤이 카톡으로 보내주는 서류에 직접 작성해서 보내요. 링크 메일이 안 오면 스팸함을 확인하고, 그래도 없으면 쌤한테 시험 초대를 다시 요청하세요.</p></div><div class="card"><h2>꼭 외울 한 줄 10개</h2>
 <ul>
 <li><b>안전 1원칙</b>: 절대 혼자 다이빙하지 않는다. 항상 자격 있는 버디와 함께.</li>
 <li>숨 참기 괴로운 이유는 <b>산소 부족이 아니라 CO2 증가</b> 때문.</li>
