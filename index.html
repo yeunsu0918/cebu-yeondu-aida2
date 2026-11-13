@@ -214,6 +214,11 @@ nav{padding:0 max(0px,calc((100% - 760px)/2))}
 .steps li b:first-child{display:block;color:var(--d);font-size:15px;margin-bottom:2px}
 .steps a{color:var(--c)}
 .howto .note{font-size:13px;color:var(--mute);background:var(--bg);border-radius:10px;padding:10px 12px;margin:4px 0 0;line-height:1.55;word-break:keep-all}
+.forms{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:2px 0 10px}
+.forms a{display:block;text-decoration:none;color:var(--d);border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff}
+.forms a b{display:block;font-size:14px;line-height:1.35;word-break:keep-all}.forms a small{color:var(--mute);font-size:12px}
+.forms a::before{content:"PDF";display:inline-block;font-size:10px;font-weight:800;color:#fff;background:#dc2626;border-radius:4px;padding:1px 5px;margin-bottom:6px}
+.fill{margin:0 0 8px;padding-left:18px;font-size:13.5px;line-height:1.6;color:#334155;word-break:keep-all}
 
 footer{font-size:12px;color:#888;text-align:center;padding:18px 12px 70px}
 </style></head><body>
@@ -222,13 +227,17 @@ footer{font-size:12px;color:#888;text-align:center;padding:18px 12px 70px}
 <main>
 <section id="quiz"><div id="qz"></div></section>
 <section id="key" class="on"><div class="tip"><b>공부 순서</b> 핵심 → 요약(7장 안전 중점) → 숫자 → 복습 → 용어 → 모의고사</div><div class="card howto"><h2>이론시험 신청 방법</h2><ol class="steps">
-<li><b>초대 메일로 AIDA 가입</b>쌤이 과정에 초대하면 "EOS Course Notification" 메일이 와요. 메일 링크나 <a href="https://eos.aidainternational.org/Register" target="_blank" rel="noopener">AIDA EOS 가입 페이지</a>에서 가입하고, 이어서 오는 "Confirm your AIDA account" 메일로 이메일 인증을 해요.</li>
-<li><b>프로필 채우기</b>영문 이름은 <b>여권과 똑같이</b> 써요(자격증에 그대로 찍혀요). 주소, 전화번호, 비상연락처를 넣고 쌤 과정 초대 수락에 체크해요. 증명사진은 나중에 올려도 돼요.</li>
-<li><b>쌤한테 가입 완료 알리기</b>카톡으로 "가입했어요, 이론시험 링크 부탁드려요"라고 보내면 "Online Exam Invitation - AIDA2" 메일이 와요.</li>
-<li><b>시험 언어 고르기</b>메일 링크를 누르고 시험 화면에서 언어를 <b>Korean</b>으로 고르면 시험 링크가 나와요. 같은 링크가 메일로도 한 통 더 와요.</li>
-<li><b>응시</b>"평가 동의서"에 동의하면 바로 시작돼요. 33문제, 90분, 75% 이상이면 합격이에요. 교재를 보지 않고 혼자 푸는 시험이에요.</li>
-<li><b>끝나면 쌤한테 알리기</b>점수는 바로 나오고 "리뷰 결과"에서 틀린 문제를 볼 수 있어요. 자동으로 안 갈 수도 있으니 쌤한테 직접 알려주세요.</li>
-</ol><p class="note">면책동의서와 건강확인서는 쌤이 카톡으로 보내주는 서류에 직접 작성해서 보내요. 링크 메일이 안 오면 스팸함을 확인하고, 그래도 없으면 쌤한테 시험 초대를 다시 요청하세요.</p></div><div class="card"><h2>꼭 외울 한 줄 10개</h2>
+<li><b>쌤한테 카톡으로 메일 주소 보내기</b>"세부프리다이빙 연두쌤" 카톡으로 메일 주소를 보내면 AIDA 가입 메일("EOS Course Notification")이 와요.</li>
+<li><b>메일 링크로 AIDA 가입</b>가입하고 "Confirm your AIDA account" 메일로 인증해요. 영문 이름은 <b>여권과 똑같이</b> 써요(자격증에 그대로 찍혀요). 주소, 전화번호, 비상연락처도 넣어요.</li>
+<li><b>교육 수락</b>왼쪽 메뉴 교육과정(My Courses)에서 연두쌤 과정의 교육수락을 눌러요. 가입할 때 초대 수락에 체크했다면 이미 처리돼 있어요.</li>
+<li><b>교재 받기</b>왼쪽 메뉴 자료실(Manuals)에서 AIDA2 교재를 받아요. <b>한국어판(AIDA2 KR Manual 2026)</b>도 있어요.</li>
+<li><b>시험 링크 받기</b>쌤이 메일로 시험 초대를 보내요("Online Exam Invitation - AIDA2"). 링크를 눌러 언어를 <b>Korean</b>으로 고르면 Brillium에서 "Assessment Invitation - AIDA2 Online Exam - Korean" 메일이 와요. 그 안의 링크로 들어가요.</li>
+<li><b>응시</b>"평가 동의서"에 동의하면 시작돼요. 33문제, 90분, 75% 이상이면 합격이고 교재 없이 혼자 풀어요. 끝나면 "리뷰 결과"로 틀린 문제를 보고 쌤한테 알려요.</li>
+<li><b>서류 2개 작성해서 보내기</b>아래 양식을 작성해서 쌤한테 카톡으로 보내요.</li>
+</ol>
+<div class="forms"><a href="https://yeunsu0918.github.io/cebu-yeondu-aida2/AIDA_liability_release.pdf" target="_blank" rel="noopener"><b>책임면제·위험부담 동의서</b><small>Liability Release · PDF 1쪽</small></a><a href="https://yeunsu0918.github.io/cebu-yeondu-aida2/AIDA_medical_statement.pdf" target="_blank" rel="noopener"><b>건강 확인서</b><small>Medical Statement · PDF 2쪽</small></a></div>
+<ul class="fill"><li><b>동의서 빈칸</b> 내 이름, 다이브샵 <b>연두다이브</b>, 강사 <b>우연두</b>, 날짜는 내 교육 시작일, 서명</li><li><b>건강 확인서</b> 11개 질문에 YES/NO 체크. 잘 모르겠으면 YES. YES가 하나라도 있으면 의사 확인 서명이 필요해요.</li><li>만 18세 미만은 보호자 서명도 받아요.</li></ul>
+<p class="note">양식은 AIDA 자료실에 있는 영문 원본이에요. 쌤이 카톡으로 한글 양식을 주면 그걸 써도 돼요. 메일이 안 오면 스팸함을 확인하고, 그래도 없으면 쌤한테 다시 요청하세요.</p></div><div class="card"><h2>꼭 외울 한 줄 10개</h2>
 <ul>
 <li><b>안전 1원칙</b>: 절대 혼자 다이빙하지 않는다. 항상 자격 있는 버디와 함께.</li>
 <li>숨 참기 괴로운 이유는 <b>산소 부족이 아니라 CO2 증가</b> 때문.</li>
